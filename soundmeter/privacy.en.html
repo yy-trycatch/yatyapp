@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Decibel Meter (SoundMeter)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.en.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Products</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Privacy</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Terms</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.en.html#contact">Contact</a></li>
+        <li class="lang">
+          <button>English</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.en.html">~</a> / <a href="index.en.html">soundmeter</a> / privacy.html</div>
+    <h1>Decibel Meter Privacy Policy</h1>
+    <p class="meta">Effective: 2026-11-04 · Last updated: 2026-11-04 · App: Decibel Meter / 分贝检测 (com.yaty.audiometry)</p>
+
+    <p>Decibel Meter (the "App") is developed and operated by the yatyapp developer ("we", "us"). This policy explains what information the App accesses, why, where it is stored, and how you can control it. Please read it before using the App.</p>
+
+    <div class="note"><strong>Summary:</strong> We run no server that collects user data. Measurement records, audio and video are stored only on your device by default. The App integrates Google services for ads, analytics, crash reporting, sign-in and payments, which process some device and usage information under their own privacy policies.</div>
+
+    <h2>1. Permissions and why we need them</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>
+        <tr><td>Microphone<br><code>RECORD_AUDIO</code></td><td>Captures ambient sound to calculate decibels; records sound to local audio files during measurements and video; monitors sound level for voice-activated recording.</td><td>Required for noise check and dB camera</td></tr>
+        <tr><td>Camera<br><code>CAMERA</code></td><td>Records video in the dB camera.</td><td>dB camera only</td></tr>
+        <tr><td>Location<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>Shows address, coordinates and weather in the dB camera watermark.</td><td>Optional; recording works if denied</td></tr>
+        <tr><td>Network<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>Weather lookup; ads; Google sign-in; purchase verification; analytics and crash reports.</td><td>Some features</td></tr>
+        <tr><td>Advertising ID<br><code>AD_ID</code></td><td>Used by the ad and analytics SDKs for ad delivery, frequency capping, measurement and analytics.</td><td>Controlled in system settings</td></tr>
+        <tr><td>Storage<br><code>READ/WRITE_EXTERNAL_STORAGE</code></td><td>Declared in the manifest but never requested at runtime. All files are written to the App's own directory, which needs no permission.</td><td>No</td></tr>
+      </table>
+    </div>
+    <p>We request permissions only when you use the related feature. You can revoke them at any time in Settings &gt; Apps &gt; Decibel Meter &gt; Permissions. The related feature will stop working; other features are unaffected.</p>
+
+    <h2>2. How each feature handles your information</h2>
+    <h3>2.1 Noise check</h3>
+    <p>The App reads the microphone at 44.1kHz and calculates decibels on the device. Once a measurement starts, the App <strong>records the raw sound to a WAV audio file</strong> and saves it with the dB data as one record. Audio is never uploaded to us or any third-party server.</p>
+
+    <h3>2.2 dB camera</h3>
+    <p>While filming, the App records video and sound and writes dB statistics, time, address, coordinates and weather into the video frames. Video and audio files are saved on your device. Note that <strong>location shown in the watermark is visible to anyone you share the video with</strong>.</p>
+
+    <h3>2.3 Voice-activated recording</h3>
+    <p>While the App's main screen is in the foreground, the App continuously monitors the microphone level. When the level reaches your threshold (70dB by default, adjustable from 40 to 140dB), the App <strong>automatically records for 3 minutes</strong>: audio on the noise check tab, or video plus audio on the dB camera tab. Recordings stay on your device. Monitoring stops when the App goes to the background.</p>
+
+    <h3>2.4 Location and weather</h3>
+    <ul>
+      <li>The App reads the device's last known location only in the dB camera, and never tracks location in the background.</li>
+      <li>Addresses are resolved by the Android system geocoder (<code>Geocoder</code>), which may be provided by the device maker or Google.</li>
+      <li>For weather, the App sends coordinates <strong>rounded to 2 decimal places (about 1 km)</strong> to the Open-Meteo weather service and caches the result on the device for 15 minutes.</li>
+      <li>Location is used only to display and stamp the video watermark. It is not saved separately in the records database.</li>
+    </ul>
+    <h3>2.5 History and sharing</h3>
+    <p>Each record is stored in a local SQLite database: start and end time, duration, min / average / max dB, the dB time series, and the paths of the related video and audio files. When you share, the App builds a ZIP with an Excel sheet, the video and the audio on your device and hands it to the system share sheet. You decide who receives it.</p>
+
+    <h3>2.6 Google sign-in (optional)</h3>
+    <p>Sign-in is not required to use the App; it is needed only to buy or restore a membership. After sign-in, the App receives your Google account user ID, display name, email, phone number (if linked to the account) and profile photo URL through Firebase Authentication. The App only shows your name and photo on the Me page and uses your account identity to complete and restore purchases. This information is not sent to any server of ours. You can sign out on the Me page at any time.</p>
+
+    <h3>2.7 Membership and ad quota</h3>
+    <p>Purchases are processed by Google Play Billing; we never receive your card or payment account details. Membership status and extra record quota earned from rewarded ads are stored on the device in encrypted form.</p>
+
+    <h2>3. Third-party services</h2>
+    <p>The App integrates the following services. They process information independently under their own privacy policies, which we do not control. We recommend reading them.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Information that may be processed</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>App-open and rewarded ads</td><td>Advertising ID, device model and OS version, IP address, ad interactions</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>Anonymous usage statistics</td><td>App instance ID, advertising ID, device info, app usage events</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting</td><td>Crash logs, device model, OS version, app version</td></tr>
+        <tr><td>Firebase Authentication / Google Sign-In</td><td>Google LLC</td><td>Account sign-in</td><td>Google account ID, name, email, phone number, profile photo</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>In-app purchases</td><td>Purchase records, order information</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>Weather lookup</td><td>Coordinates at about 1 km precision, IP address</td></tr>
+        <tr><td>System geocoder</td><td>Device maker or Google</td><td>Coordinates to address</td><td>Coordinates</td></tr>
+      </table>
+    </div>
+    <p>Policies: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from partner apps</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo Terms</a></p>
+
+    <h2>4. Sharing, transfer and disclosure</h2>
+    <ul>
+      <li>We do not sell your personal information.</li>
+      <li>Apart from the services in section 3, we do not share your information with any third party.</li>
+      <li>Records, audio and video leave your device only when you share them yourself.</li>
+      <li>We will cooperate with lawful requests from competent authorities as required by law, but we do not hold your record data.</li>
+    </ul>
+
+    <h2>5. Storage and deletion</h2>
+    <ul>
+      <li>Records, audio and video are kept in the App's private directory until you delete the record, clear the App's data or uninstall the App.</li>
+      <li>Android auto backup is disabled for this App, so your records are not backed up to the cloud.</li>
+      <li>Currently, deleting a record in the App removes it from the list, but the related audio and video files and temporary share bundles may remain in the App's private directory until you clear the App's data in system settings or uninstall the App.</li>
+      <li>Information collected by third-party services is retained under their own policies.</li>
+    </ul>
+
+    <h2>6. Your rights</h2>
+    <ul>
+      <li><strong>Manage permissions:</strong> turn microphone, camera and location access on or off in system settings at any time.</li>
+      <li><strong>Control voice-activated recording:</strong> adjust the threshold on the Me page.</li>
+      <li><strong>Delete data:</strong> delete records in the App, clear the App's data in system settings, or uninstall the App.</li>
+      <li><strong>Sign out:</strong> sign out of your Google account on the Me page.</li>
+      <li><strong>Manage ads:</strong> reset or delete your advertising ID and opt out of personalized ads in Android Settings &gt; Privacy &gt; Ads.</li>
+      <li><strong>Questions and complaints:</strong> contact us at the email in section 10.</li>
+    </ul>
+
+    <h2>7. Security</h2>
+    <p>Communication with the weather service and third-party SDKs uses HTTPS. Sensitive settings such as membership status are stored with Android encrypted storage. Please keep your device secure so others cannot access recordings on it.</p>
+
+    <h2>8. Children</h2>
+    <p>The App is not directed at children under 14. Minors should use the App with the consent and guidance of a parent or guardian. If a guardian believes a minor has provided us personal information without consent, please contact us.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this policy when features change or the law requires it. The updated version will be posted on this page with a new date. For material changes affecting your rights, we will notify you in the App, for example with a dialog.</p>
+
+    <h2>10. Contact us</h2>
+    <p>For any questions, comments or requests about this policy or your personal information, email: <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

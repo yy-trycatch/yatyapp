@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私条例 - 分贝检测 SoundMeter</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="菜单">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>产品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隐私条例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>用户协议</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#contact">联系方式</a></li>
+        <li class="lang">
+          <button>简体中文</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.html">~</a> / <a href="index.html">soundmeter</a> / privacy.html</div>
+    <h1>分贝检测 隐私条例</h1>
+    <p class="meta">生效日期：2026-11-04 · 更新日期：2026-11-04 · 适用应用：分贝检测 / Decibel Meter（com.yaty.audiometry）</p>
+
+    <p>分贝检测（以下简称“本应用”）由 yatyapp 开发者（以下简称“我们”）开发和运营。我们非常重视你的个人信息保护。本条例说明本应用会访问哪些信息、为什么访问、信息存放在哪里，以及你可以如何管理这些信息。请在使用本应用前仔细阅读。</p>
+
+    <div class="note"><strong>要点速览：</strong>我们不运营用于收集用户数据的服务器。测量记录、音频、视频默认只保存在你的设备上。本应用集成了 Google 提供的广告、统计、崩溃分析、登录和支付服务，这些服务会按其各自的隐私政策处理部分设备和使用信息。</div>
+
+    <h2>1. 我们申请的权限及用途</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>权限</th><th>用途</th><th>是否必需</th></tr>
+        <tr><td>麦克风<br><code>RECORD_AUDIO</code></td><td>采集环境声音并计算分贝值；测量和录像时把声音录制为本地音频文件；声控录制功能的音量监测。</td><td>噪音检测、分贝相机必需</td></tr>
+        <tr><td>相机<br><code>CAMERA</code></td><td>分贝相机录制视频。</td><td>仅分贝相机需要</td></tr>
+        <tr><td>位置<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>在分贝相机视频水印中显示地点、经纬度和天气。</td><td>可选，拒绝后仍可正常录制</td></tr>
+        <tr><td>网络<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>查询天气；加载广告；Google 登录；购买验证；统计与崩溃分析。</td><td>部分功能需要</td></tr>
+        <tr><td>广告标识符<br><code>AD_ID</code></td><td>由广告和统计 SDK 用于广告展示、频次控制、效果衡量和统计分析。</td><td>由系统设置控制</td></tr>
+        <tr><td>存储<br><code>READ/WRITE_EXTERNAL_STORAGE</code></td><td>清单中声明，但本应用不会在运行时申请。所有文件写入本应用专属目录，无需该权限。</td><td>否</td></tr>
+      </table>
+    </div>
+    <p>我们只在你使用相关功能时申请权限。你可以随时在系统“设置 &gt; 应用 &gt; 分贝检测 &gt; 权限”中撤回授权，撤回后对应功能将无法使用，但不影响其他功能。</p>
+
+    <h2>2. 各功能如何处理你的信息</h2>
+    <h3>2.1 噪音检测</h3>
+    <p>本应用以 44.1kHz 采样率读取麦克风声音，在本机计算分贝值。开始测量后，本应用会把<strong>原始声音录制为 WAV 音频文件</strong>，与分贝数据一起保存为一条测量记录。音频不会上传到我们或任何第三方服务器。</p>
+
+    <h3>2.2 分贝相机</h3>
+    <p>录像时，本应用同时录制视频和声音，并把分贝统计、时间、地点、经纬度、天气写入视频画面。视频和音频文件保存在本机。请注意：<strong>水印中的位置信息会随视频一起被他人看到</strong>，分享前请确认。</p>
+
+    <h3>2.3 声控录制</h3>
+    <p>当本应用主界面处于前台时，本应用会持续监测麦克风音量。当音量达到你设置的阈值（默认 70dB，可在 40-140dB 之间调整）时，本应用会<strong>自动开始录制 3 分钟</strong>：在噪音检测页录制音频，在分贝相机页录制视频和音频。录制结果同样只保存在本机。本应用退到后台后不会进行监测。</p>
+
+    <h3>2.4 位置与天气</h3>
+    <ul>
+      <li>本应用只在分贝相机中读取设备最近一次的位置，不会在后台持续追踪位置。</li>
+      <li>地址由 Android 系统地理编码服务（<code>Geocoder</code>）解析，该服务可能由设备厂商或 Google 提供。</li>
+      <li>天气查询时，本应用会把<strong>四舍五入到小数点后 2 位（约 1 公里精度）</strong>的经纬度发送给 Open-Meteo 天气服务，结果在本机缓存 15 分钟。</li>
+      <li>位置信息只用于显示和写入视频水印，不会单独存入记录数据库。</li>
+    </ul>
+    <h3>2.5 历史记录与分享</h3>
+    <p>每条测量记录保存在本机 SQLite 数据库中，内容包括开始和结束时间、时长、最小 / 平均 / 最大分贝、分贝时间序列，以及对应视频和音频文件的路径。你选择分享时，本应用会在本机生成一个包含 Excel 表格、视频和音频的压缩包，并交给系统分享面板发送，接收方由你决定。</p>
+
+    <h3>2.6 Google 登录（可选）</h3>
+    <p>登录不是使用本应用的前提，只有购买或恢复会员时需要。登录后，本应用通过 Firebase Authentication 获得你的 Google 账号用户 ID、昵称、邮箱、手机号（如账号已绑定）和头像地址。本应用只在“我的”页面显示昵称和头像，并用账号身份完成购买和恢复购买，不会把这些信息发送到我们自己的服务器。你可以随时在“我的”页面退出登录。</p>
+
+    <h3>2.7 会员与广告额度</h3>
+    <p>购买通过 Google Play 结算完成，我们无法获取你的银行卡或支付账户信息。会员状态和通过激励广告获得的额外记录额度使用加密方式保存在本机。</p>
+
+    <h2>3. 第三方服务</h2>
+    <p>本应用集成了以下第三方服务。它们会按照各自的隐私政策独立处理信息，我们无法控制其处理方式，建议你阅读其政策。</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>服务</th><th>提供方</th><th>用途</th><th>可能处理的信息</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>启动页开屏广告、激励广告</td><td>广告标识符、设备型号与系统版本、IP 地址、广告互动数据</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>匿名使用统计</td><td>应用实例 ID、广告标识符、设备信息、应用使用事件</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>崩溃分析</td><td>崩溃日志、设备型号、系统版本、应用版本</td></tr>
+        <tr><td>Firebase Authentication / Google 登录</td><td>Google LLC</td><td>账号登录</td><td>Google 账号 ID、昵称、邮箱、手机号、头像</td></tr>
+        <tr><td>Google Play 结算</td><td>Google LLC</td><td>应用内购买</td><td>购买记录、订单信息</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>天气查询</td><td>约 1 公里精度的经纬度、IP 地址</td></tr>
+        <tr><td>系统地理编码服务</td><td>设备厂商或 Google</td><td>经纬度转地址</td><td>经纬度</td></tr>
+      </table>
+    </div>
+    <p>相关政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用合作伙伴应用的信息</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隐私与安全</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo 条款</a></p>
+
+    <h2>4. 信息的共享、转让与公开披露</h2>
+    <ul>
+      <li>我们不会出售你的个人信息。</li>
+      <li>除第 3 节所列第三方服务外，我们不会主动向任何第三方共享你的信息。</li>
+      <li>测量记录、音频和视频只有在你主动分享时才会离开设备。</li>
+      <li>如法律法规或有权机关依法要求，我们会在法律要求的范围内配合，但我们本身并不持有你的记录数据。</li>
+    </ul>
+
+    <h2>5. 信息的存储与删除</h2>
+    <ul>
+      <li>测量记录、音频和视频保存在本应用的专属目录中，直到你删除记录、清除应用数据或卸载本应用。</li>
+      <li>本应用关闭了 Android 系统自动备份，你的记录不会被备份到云端。</li>
+      <li>目前在应用内删除一条记录，会从记录列表中移除该记录；相关的音视频文件以及分享时生成的临时压缩包可能仍留在本应用专属目录中，直到你在系统设置中清除本应用数据或卸载本应用。</li>
+      <li>第三方服务收集的信息按其各自政策保存。</li>
+    </ul>
+
+    <h2>6. 你的权利</h2>
+    <ul>
+      <li><strong>管理权限：</strong>在系统设置中随时开启或关闭麦克风、相机、位置权限。</li>
+      <li><strong>控制声控录制：</strong>在“我的”页面调整声控阈值。</li>
+      <li><strong>删除数据：</strong>在应用内删除记录，或在系统设置中清除本应用数据，或卸载本应用。</li>
+      <li><strong>退出登录：</strong>在“我的”页面退出 Google 账号。</li>
+      <li><strong>管理广告：</strong>在 Android“设置 &gt; 隐私 &gt; 广告”中重置或删除广告 ID，关闭个性化广告。</li>
+      <li><strong>咨询与投诉：</strong>通过第 10 节的邮箱联系我们。</li>
+    </ul>
+
+    <h2>7. 信息安全</h2>
+    <p>本应用与天气服务及第三方 SDK 的通信均使用 HTTPS 加密传输；会员状态等敏感设置使用 Android 加密存储保存。请妥善保管你的设备，避免他人接触本机中的录音和录像。</p>
+
+    <h2>8. 未成年人保护</h2>
+    <p>本应用不面向未满 14 周岁的儿童。如果你是未成年人，请在监护人的陪同和同意下使用。如果监护人发现未成年人在未经同意的情况下向我们提供了个人信息，请联系我们处理。</p>
+
+    <h2>9. 本条例的更新</h2>
+    <p>我们可能会根据功能变化或法律要求更新本条例。更新后的版本会发布在本页面并更新日期。如变更涉及你的权利的重大调整，我们会在应用内以弹窗等方式提示你。</p>
+
+    <h2>10. 联系我们</h2>
+    <p>如对本条例或你的个人信息有任何疑问、意见或请求，请发送邮件至：<a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>。</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

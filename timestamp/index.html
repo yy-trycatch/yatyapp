@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>印章相机 TimeStamp - yatyapp</title>
+  <meta name="description" content="印章相机 TimeStamp：时间、地点、天气、海拔水印相机，支持视频水印、图片编辑与工作日报拼图。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="菜单">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>产品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隐私条例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>用户协议</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#contact">联系方式</a></li>
+        <li class="lang">
+          <button>简体中文</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./timestamp</span>
+    <h1>印章相机<br><em>TimeStamp</em></h1>
+    <p class="lead">拍照和录像时自动加盖时间、地点、坐标、天气、海拔水印。适合打卡、巡检、施工记录和工作汇报，照片和视频只保存在你的相册里。</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.html">隐私条例</a>
+    <a class="btn ghost" href="terms.html">用户协议</a>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>水印分类</span></div>
+      <div class="stat"><b>9</b><span>拼图最多图片数</span></div>
+      <div class="stat"><b>IMG / PDF</b><span>拼图导出格式</span></div>
+      <div class="stat"><b>0</b><span>媒体上传</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">// 核心能力</p>
+      <div class="features">
+        <div class="feature"><h4>watermark</h4><p>时间、日期、地址、经纬度、海拔、天气、设备型号、自定义文字和 Logo，每个字段都可单独编辑或隐藏。</p></div>
+        <div class="feature"><h4>templates</h4><p>通用、生活、工作汇报、巡检、考勤五类水印样式，一键切换。</p></div>
+        <div class="feature"><h4>video_overlay</h4><p>录像时水印实时烧录进视频画面，时间随录制同步更新。</p></div>
+        <div class="feature"><h4>camera</h4><p>前后摄像头、变焦、闪光灯、亮度、定时拍摄，3:4 / 9:16 / 1:1 画幅，流畅 / 标准 / 高清画质。</p></div>
+        <div class="feature"><h4>collage</h4><p>工作日报、工作汇报、工作记录、施工日志等拼图模板，最多 9 张图，导出图片或 PDF。</p></div>
+        <div class="feature"><h4>editor</h4><p>裁剪、旋转、亮度、对比度、饱和度，以及黑白、复古、鲜艳、冷调、暖调、褪色滤镜。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <p class="section-sub">// 真机截图</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/camera_play.png" alt="水印拍照" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / camera</span>
+            <h3>水印拍照</h3>
+            <p>取景时即可预览水印效果。时间、日期、位置、坐标、天气、海拔、设备型号自动填充，拍下即成片。</p>
+            <ul>
+              <li>定位只读取当前位置，不在后台追踪</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="录像模式" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / video</span>
+            <h3>水印录像</h3>
+            <p>切到录像模式，同一套水印样式直接用于视频，夜景下同样清晰可读。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/videorecord_play.png" alt="录制中" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / recording</span>
+            <h3>边录边盖章</h3>
+            <p>录制过程中水印实时写入每一帧画面，录完的视频不需要后期处理。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/picedit_play.png" alt="图片编辑" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / editor</span>
+            <h3>图片编辑</h3>
+            <p>对拍好的照片进行裁剪、旋转、调色和滤镜处理，保存后回到相册。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/wordpage_play.png" alt="工作日报拼图" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / collage</span>
+            <h3>工作日报拼图</h3>
+            <p>选择模板，填写今日工作和明日计划，添加最多 9 张现场照片，一键生成日报图片或 PDF。</p>
+            <ul>
+              <li>模板 / 排版 / 表头可自由组合</li>
+              <li>历史草稿自动保存在本机</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.html">隐私条例</a> · <a href="terms.html">用户协议</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

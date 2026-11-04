@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decibel Meter (SoundMeter) - yatyapp</title>
+  <meta name="description" content="Decibel Meter: real-time noise measurement, dB camera, history records and Excel export.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.en.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Products</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Privacy</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Terms</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.en.html#contact">Contact</a></li>
+        <li class="lang">
+          <button>English</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>Decibel Meter<br><em>SoundMeter</em></h1>
+    <p class="lead">A sound level meter in your pocket. Measure ambient noise in real time, record videos with dB data overlaid, then replay, share or export every record to Excel.</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.en.html">Privacy Policy</a>
+    <a class="btn ghost" href="terms.en.html">Terms of Use</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>sample rate</span></div>
+      <div class="stat"><b>A / C</b><span>frequency weighting</span></div>
+      <div class="stat"><b>6</b><span>UI languages</span></div>
+      <div class="stat"><b>0</b><span>data servers of our own</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">// core capabilities</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>44.1kHz sampling with Goertzel band analysis and A / C weighting. The gauge shows current, average, max and min dB plus a live trend line.</p></div>
+        <div class="feature"><h4>db_camera</h4><p>Burns dB statistics, time, address, coordinates and weather into the video while recording. Front/back camera and flash supported.</p></div>
+        <div class="feature"><h4>history</h4><p>Every measurement is saved automatically. The detail page charts the dB curve; tap any point to jump to that moment in the video.</p></div>
+        <div class="feature"><h4>export</h4><p>Bundle an Excel sheet (summary + per-point data), the video and the audio, and send it through the system share sheet.</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>Voice-activated recording: when the sound level reaches your threshold (70dB by default, adjustable 40-140dB), a 3-minute recording starts automatically.</p></div>
+        <div class="feature"><h4>i18n</h4><p>Simplified Chinese, Traditional Chinese, English, Japanese, Korean and Vietnamese.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <p class="section-sub">// captured on a real device</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="Splash screen" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>Open and measure</h3>
+            <p>The first launch shows a privacy notice. After you agree, you go straight to the meter. No account needed.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="Noise check" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>Live noise check</h3>
+            <p>The gauge shows the current level, with average, maximum, minimum and a real-time curve below.</p>
+            <ul>
+              <li>A-weighting: close to human hearing</li>
+              <li>C-weighting: keeps more low frequencies</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="dB camera" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>dB camera</h3>
+            <p>Measure while you film. dB values, duration, time, place and weather are burned into the video, so the evidence is visible on replay and when shared.</p>
+            <ul>
+              <li>Location is optional; recording works without it</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="History list" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>History</h3>
+            <p>All records listed by time with duration and max / average / min dB. Data is stored on your device.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="Record detail" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>Chart linked to video</h3>
+            <p>The detail page shows the full dB curve and video playback. Tap anywhere on the curve to seek the video to that moment.</p>
+            <ul>
+              <li>Share Excel + video + audio as one bundle</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="Me page" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>Me</h3>
+            <p>Google sign-in, membership center, rewarded ads for extra record quota, voice-trigger threshold, plus the privacy policy and terms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.en.html">Privacy Policy</a> · <a href="terms.en.html">Terms of Use</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

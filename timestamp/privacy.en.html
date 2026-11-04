@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - TimeStamp Camera</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.en.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Products</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Privacy</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Terms</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.en.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.en.html#contact">Contact</a></li>
+        <li class="lang">
+          <button>English</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.en.html">~</a> / <a href="index.en.html">timestamp</a> / privacy.html</div>
+    <h1>TimeStamp Camera Privacy Policy</h1>
+    <p class="meta">Effective: 2026-11-04 · Last updated: 2026-11-04 · App: TimeStampCamera / 印章相机 (com.yaty.stampcam)</p>
+
+    <p>TimeStamp Camera (the "App") is developed and operated by the yatyapp developer ("we", "us"). This policy explains what information the App accesses, why, where it is stored, and how you can control it. Please read it before using the App.</p>
+
+    <div class="note"><strong>Summary:</strong> We run no server that collects user data. Your photos and videos are saved only in your device gallery and are never uploaded. To build watermarks, the App sends location coordinates to third-party altitude and weather services. The App integrates Google services for ads, analytics, crash reporting, sign-in and payments.</div>
+
+    <h2>1. Permissions and why we need them</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>
+        <tr><td>Camera<br><code>CAMERA</code></td><td>Viewfinder, photos and videos.</td><td>Required</td></tr>
+        <tr><td>Microphone<br><code>RECORD_AUDIO</code></td><td>Records sound for videos. Used only while recording video.</td><td>Video recording</td></tr>
+        <tr><td>Location<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>Shows address, coordinates, altitude and weather in the watermark.</td><td>Optional; location fields stay empty if denied</td></tr>
+        <tr><td>Photos and videos<br><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_EXTERNAL_STORAGE</code> (Android 12 and below)</td><td>Reads your photos and videos for the in-app gallery, share timeline and collages.</td><td>Gallery, collage, sharing</td></tr>
+        <tr><td>Write storage<br><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and below only)</td><td>Saves photos and videos to the gallery on older Android versions.</td><td>Saving on old Android</td></tr>
+        <tr><td>Media location<br><code>ACCESS_MEDIA_LOCATION</code></td><td>Declared in the manifest; not used by the current version.</td><td>No</td></tr>
+        <tr><td>Network<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>Altitude and weather lookup; ads; Google sign-in; purchase verification; analytics and crash reports.</td><td>Some features</td></tr>
+        <tr><td>Advertising ID<br><code>AD_ID</code></td><td>Used by the ad and analytics SDKs for ad delivery, measurement and analytics.</td><td>Controlled in system settings</td></tr>
+        <tr><td>Vibration<br><code>VIBRATE</code></td><td>Haptic feedback on interactions.</td><td>No</td></tr>
+      </table>
+    </div>
+    <p>We request permissions only when you use the related feature. You can revoke them at any time in Settings &gt; Apps &gt; TimeStamp Camera &gt; Permissions. The related feature will stop working; other features are unaffected.</p>
+
+    <h2>2. How each feature handles your information</h2>
+    <h3>2.1 Photos and videos</h3>
+    <p>Photos and videos are saved to your device gallery through the system media store (an App album under Pictures and Movies). Files in the system gallery can be read by other apps you have granted gallery access. The App never uploads photos or videos to us or any third-party server. Previews write a temporary image to the App's cache directory.</p>
+
+    <h3>2.2 Location, altitude and weather</h3>
+    <ul>
+      <li>The App reads the device's last known location only on the camera screen, and never tracks location in the background.</li>
+      <li>Addresses are resolved by the Android system geocoder (<code>Geocoder</code>), which may be provided by the device maker or Google.</li>
+      <li><strong>Altitude:</strong> when the location fix has no altitude, the App sends <strong>precise coordinates (6 decimal places)</strong> to the Open-Elevation service and caches the result in memory for 10 minutes.</li>
+      <li><strong>Weather:</strong> only when the weather setting is on and the current watermark includes a weather field, the App sends coordinates <strong>rounded to 2 decimal places (about 1 km)</strong> to the Open-Meteo weather service and caches the result for 15 minutes.</li>
+      <li>Location is used only to display and stamp the watermark. It is not stored separately or uploaded to any server of ours. Note that <strong>location in the watermark is visible to anyone you share the photo or video with</strong>.</li>
+    </ul>
+    <h3>2.3 Watermark content and device information</h3>
+    <p>Watermarks may contain custom text you enter (such as name, organization or notes), a logo image you pick from the gallery, and the device model and manufacturer. These are used only on the device to draw the watermark and are saved with your photos or videos.</p>
+
+    <h3>2.4 Editing, collages and sharing</h3>
+    <ul>
+      <li>Photo editing, collages and PDF export all run on the device.</li>
+      <li>Collages read the EXIF capture time of photos for sorting and display. Up to 30 recent collage drafts are stored on the device.</li>
+      <li>When you share a watermark template, the App creates a poster on the device with the watermark style, the name and organization you entered, and a QR code linking to the App's Google Play page.</li>
+      <li>All sharing goes through the system share sheet. You decide who receives it.</li>
+    </ul>
+
+    <h3>2.5 Google sign-in (optional)</h3>
+    <p>Sign-in is not required to use the App; it is needed only to buy or restore Premium. After sign-in, the App receives your Google account user ID, display name, email, phone number (if linked to the account) and profile photo URL through Firebase Authentication. It uses them only to identify the purchaser and does not send them to any server of ours. You can sign out at any time.</p>
+
+    <h3>2.6 Purchases</h3>
+    <p>Purchases are processed by Google Play Billing; we never receive your card or payment account details. Premium status is stored on the device in encrypted form.</p>
+
+    <h3>2.7 Local settings</h3>
+    <p>Watermark styles, field toggles, aspect ratio, quality, language and other settings are stored on the device. The App allows Android backup, so if system backup is on, these settings and collage drafts may be backed up to your Google account (photos and videos are not part of the App's backup).</p>
+
+    <h2>3. Third-party services</h2>
+    <p>The App integrates the following services. They process information independently under their own privacy policies. We recommend reading them. The App does not initialize advertising until you accept this policy.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Information that may be processed</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>App-open ad on launch</td><td>Advertising ID, device model and OS version, IP address, ad interactions</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>Anonymous usage statistics</td><td>App instance ID, advertising ID, device info, app usage events</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting</td><td>Crash logs, device model, OS version, app version</td></tr>
+        <tr><td>Firebase Authentication / Google Sign-In</td><td>Google LLC</td><td>Account sign-in</td><td>Google account ID, name, email, phone number, profile photo</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>In-app purchases</td><td>Purchase records, order information</td></tr>
+        <tr><td>Open-Elevation</td><td>open-elevation.com</td><td>Altitude lookup</td><td>Precise coordinates, IP address</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>Weather lookup</td><td>Coordinates at about 1 km precision, IP address</td></tr>
+        <tr><td>System geocoder</td><td>Device maker or Google</td><td>Coordinates to address</td><td>Coordinates</td></tr>
+      </table>
+    </div>
+    <p>Policies: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from partner apps</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo Terms</a> · <a href="https://open-elevation.com/" target="_blank" rel="noopener">Open-Elevation</a></p>
+    <h2>4. Sharing, transfer and disclosure</h2>
+    <ul>
+      <li>We do not sell your personal information.</li>
+      <li>Apart from the services in section 3, we do not share your information with any third party.</li>
+      <li>Photos, videos and collages leave your device only when you share them yourself.</li>
+      <li>We will cooperate with lawful requests from competent authorities as required by law, but we do not hold your photos, videos or location data.</li>
+    </ul>
+
+    <h2>5. Storage and deletion</h2>
+    <ul>
+      <li>Photos and videos are kept in the system gallery. Uninstalling the App does not delete them; you can delete them in the gallery yourself.</li>
+      <li>Settings, collage drafts and purchase status are stored in the App's data and removed when you clear the App's data or uninstall it.</li>
+      <li>Altitude and weather results are cached briefly in memory and cleared when the App closes.</li>
+      <li>Information collected by third-party services is retained under their own policies.</li>
+    </ul>
+
+    <h2>6. Your rights</h2>
+    <ul>
+      <li><strong>Manage permissions:</strong> turn camera, microphone, location and gallery access on or off in system settings at any time.</li>
+      <li><strong>Control watermark content:</strong> hide address, coordinates, altitude, weather, device model or any other field in the watermark editor. Turning weather off stops weather requests.</li>
+      <li><strong>Delete data:</strong> delete photos and videos in the gallery, clear the App's data in system settings, or uninstall the App.</li>
+      <li><strong>Sign out:</strong> sign out of your Google account in the App.</li>
+      <li><strong>Manage ads:</strong> reset or delete your advertising ID and opt out of personalized ads in Android Settings &gt; Privacy &gt; Ads.</li>
+      <li><strong>Questions and complaints:</strong> contact us at the email in section 10.</li>
+    </ul>
+
+    <h2>7. Security</h2>
+    <p>Communication with the altitude and weather services and third-party SDKs uses HTTPS. Purchase status is stored with Android encrypted storage. Please keep your device and gallery secure.</p>
+
+    <h2>8. Children</h2>
+    <p>The App is not directed at children under 14. Minors should use the App with the consent and guidance of a parent or guardian. If a guardian believes a minor has provided us personal information without consent, please contact us.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this policy when features change or the law requires it. The updated version will be posted on this page with a new date. For material changes affecting your rights, we will notify you in the App, for example with a dialog.</p>
+
+    <h2>10. Contact us</h2>
+    <p>For any questions, comments or requests about this policy or your personal information, email: <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

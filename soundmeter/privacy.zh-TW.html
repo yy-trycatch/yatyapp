@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隱私條例 - 分貝檢測 SoundMeter</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.zh-TW.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="選單">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>產品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隱私條例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>使用者協議</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.zh-TW.html#contact">聯絡方式</a></li>
+        <li class="lang">
+          <button>繁體中文</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.zh-TW.html">~</a> / <a href="index.zh-TW.html">soundmeter</a> / privacy.html</div>
+    <h1>分貝檢測 隱私條例</h1>
+    <p class="meta">生效日期：2026-11-04 · 更新日期：2026-11-04 · 適用應用：分貝檢測 / Decibel Meter（com.yaty.audiometry）</p>
+
+    <p>分貝檢測（以下簡稱「本應用」）由 yatyapp 開發者（以下簡稱「我們」）開發和營運。我們非常重視你的個人資訊保護。本條例說明本應用會存取哪些資訊、為什麼存取、資訊存放在哪裡，以及你可以如何管理這些資訊。請在使用本應用前仔細閱讀。</p>
+
+    <div class="note"><strong>要點速覽：</strong>我們不營運用於收集使用者資料的伺服器。測量記錄、音訊、影片預設只儲存在你的裝置上。本應用整合了 Google 提供的廣告、統計、崩潰分析、登入和支付服務，這些服務會按其各自的隱私政策處理部分裝置和使用資訊。</div>
+
+    <h2>1. 我們申請的權限及用途</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>權限</th><th>用途</th><th>是否必需</th></tr>
+        <tr><td>麥克風<br><code>RECORD_AUDIO</code></td><td>採集環境聲音並計算分貝值；測量和錄影時把聲音錄製為本地音訊檔案；聲控錄製功能的音量監測。</td><td>噪音檢測、分貝相機必需</td></tr>
+        <tr><td>相機<br><code>CAMERA</code></td><td>分貝相機錄製影片。</td><td>僅分貝相機需要</td></tr>
+        <tr><td>位置<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>在分貝相機影片浮水印中顯示地點、經緯度和天氣。</td><td>可選，拒絕後仍可正常錄製</td></tr>
+        <tr><td>網路<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>查詢天氣；載入廣告；Google 登入；購買驗證；統計與崩潰分析。</td><td>部分功能需要</td></tr>
+        <tr><td>廣告識別碼<br><code>AD_ID</code></td><td>由廣告和統計 SDK 用於廣告展示、頻次控制、效果衡量和統計分析。</td><td>由系統設定控制</td></tr>
+        <tr><td>儲存<br><code>READ/WRITE_EXTERNAL_STORAGE</code></td><td>清單中宣告，但本應用不會在執行時申請。所有檔案寫入本應用專屬目錄，無需該權限。</td><td>否</td></tr>
+      </table>
+    </div>
+    <p>我們只在你使用相關功能時申請權限。你可以隨時在系統「設定 &gt; 應用 &gt; 分貝檢測 &gt; 權限」中撤回授權，撤回後對應功能將無法使用，但不影響其他功能。</p>
+
+    <h2>2. 各功能如何處理你的資訊</h2>
+    <h3>2.1 噪音檢測</h3>
+    <p>本應用以 44.1kHz 取樣率讀取麥克風聲音，在本機計算分貝值。開始測量後，本應用會把<strong>原始聲音錄製為 WAV 音訊檔案</strong>，與分貝資料一起儲存為一條測量記錄。音訊不會上傳到我們或任何第三方伺服器。</p>
+
+    <h3>2.2 分貝相機</h3>
+    <p>錄影時，本應用同時錄製影片和聲音，並把分貝統計、時間、地點、經緯度、天氣寫入影片畫面。影片和音訊檔案儲存在本機。請注意：<strong>浮水印中的位置資訊會隨影片一起被他人看到</strong>，分享前請確認。</p>
+
+    <h3>2.3 聲控錄製</h3>
+    <p>當本應用主介面處於前臺時，本應用會持續監測麥克風音量。當音量達到你設定的閾值（預設 70dB，可在 40-140dB 之間調整）時，本應用會<strong>自動開始錄製 3 分鐘</strong>：在噪音檢測頁錄製音訊，在分貝相機頁錄製影片和音訊。錄製結果同樣只儲存在本機。本應用退到後臺後不會進行監測。</p>
+
+    <h3>2.4 位置與天氣</h3>
+    <ul>
+      <li>本應用只在分貝相機中讀取裝置最近一次的位置，不會在後臺持續追蹤位置。</li>
+      <li>地址由 Android 系統地理編碼服務（<code>Geocoder</code>）解析，該服務可能由裝置廠商或 Google 提供。</li>
+      <li>天氣查詢時，本應用會把<strong>四捨五入到小數點後 2 位（約 1 公里精度）</strong>的經緯度傳送給 Open-Meteo 天氣服務，結果在本機快取 15 分鐘。</li>
+      <li>位置資訊只用於顯示和寫入影片浮水印，不會單獨存入記錄資料庫。</li>
+    </ul>
+    <h3>2.5 歷史記錄與分享</h3>
+    <p>每條測量記錄儲存在本機 SQLite 資料庫中，內容包括開始和結束時間、時長、最小 / 平均 / 最大分貝、分貝時間序列，以及對應影片和音訊檔案的路徑。你選擇分享時，本應用會在本機生成一個包含 Excel 表格、影片和音訊的壓縮包，並交給系統分享面板傳送，接收方由你決定。</p>
+
+    <h3>2.6 Google 登入（可選）</h3>
+    <p>登入不是使用本應用的前提，只有購買或恢復會員時需要。登入後，本應用透過 Firebase Authentication 獲得你的 Google 帳號使用者 ID、暱稱、郵箱、手機號（如帳號已繫結）和頭像地址。本應用只在「我的」頁面顯示暱稱和頭像，並用帳號身份完成購買和恢復購買，不會把這些資訊傳送到我們自己的伺服器。你可以隨時在「我的」頁面退出登入。</p>
+
+    <h3>2.7 會員與廣告額度</h3>
+    <p>購買透過 Google Play 結算完成，我們無法獲取你的銀行卡或支付賬戶資訊。會員狀態和透過獎勵廣告獲得的額外記錄額度使用加密方式儲存在本機。</p>
+
+    <h2>3. 第三方服務</h2>
+    <p>本應用整合了以下第三方服務。它們會按照各自的隱私政策獨立處理資訊，我們無法控制其處理方式，建議你閱讀其政策。</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>服務</th><th>提供方</th><th>用途</th><th>可能處理的資訊</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>啟動頁開屏廣告、獎勵廣告</td><td>廣告識別碼、裝置型號與系統版本、IP 地址、廣告互動資料</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>匿名使用統計</td><td>應用例項 ID、廣告識別碼、裝置資訊、應用使用事件</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>崩潰分析</td><td>崩潰日誌、裝置型號、系統版本、應用版本</td></tr>
+        <tr><td>Firebase Authentication / Google 登入</td><td>Google LLC</td><td>帳號登入</td><td>Google 帳號 ID、暱稱、郵箱、手機號、頭像</td></tr>
+        <tr><td>Google Play 結算</td><td>Google LLC</td><td>應用內購買</td><td>購買記錄、訂單資訊</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>天氣查詢</td><td>約 1 公里精度的經緯度、IP 地址</td></tr>
+        <tr><td>系統地理編碼服務</td><td>裝置廠商或 Google</td><td>經緯度轉地址</td><td>經緯度</td></tr>
+      </table>
+    </div>
+    <p>相關政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用合作伙伴應用的資訊</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私與安全</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo 條款</a></p>
+
+    <h2>4. 資訊的共享、轉讓與公開披露</h2>
+    <ul>
+      <li>我們不會出售你的個人資訊。</li>
+      <li>除第 3 節所列第三方服務外，我們不會主動向任何第三方共享你的資訊。</li>
+      <li>測量記錄、音訊和影片只有在你主動分享時才會離開裝置。</li>
+      <li>如法律法規或有權機關依法要求，我們會在法律要求的範圍內配合，但我們本身並不持有你的記錄資料。</li>
+    </ul>
+
+    <h2>5. 資訊的儲存與刪除</h2>
+    <ul>
+      <li>測量記錄、音訊和影片儲存在本應用的專屬目錄中，直到你刪除記錄、清除應用資料或解除安裝本應用。</li>
+      <li>本應用關閉了 Android 系統自動備份，你的記錄不會被備份到雲端。</li>
+      <li>目前在應用內刪除一條記錄，會從記錄列表中移除該記錄；相關的音影片檔案以及分享時生成的臨時壓縮包可能仍留在本應用專屬目錄中，直到你在系統設定中清除本應用資料或解除安裝本應用。</li>
+      <li>第三方服務收集的資訊按其各自政策儲存。</li>
+    </ul>
+
+    <h2>6. 你的權利</h2>
+    <ul>
+      <li><strong>管理權限：</strong>在系統設定中隨時開啟或關閉麥克風、相機、位置權限。</li>
+      <li><strong>控制聲控錄製：</strong>在「我的」頁面調整聲控閾值。</li>
+      <li><strong>刪除資料：</strong>在應用內刪除記錄，或在系統設定中清除本應用資料，或解除安裝本應用。</li>
+      <li><strong>退出登入：</strong>在「我的」頁面退出 Google 帳號。</li>
+      <li><strong>管理廣告：</strong>在 Android「設定 &gt; 隱私 &gt; 廣告」中重置或刪除廣告 ID，關閉個性化廣告。</li>
+      <li><strong>諮詢與投訴：</strong>透過第 10 節的郵箱聯絡我們。</li>
+    </ul>
+
+    <h2>7. 資訊保安</h2>
+    <p>本應用與天氣服務及第三方 SDK 的通訊均使用 HTTPS 加密傳輸；會員狀態等敏感設定使用 Android 加密儲存儲存。請妥善保管你的裝置，避免他人接觸本機中的錄音和錄影。</p>
+
+    <h2>8. 未成年人保護</h2>
+    <p>本應用不面向未滿 14 週歲的兒童。如果你是未成年人，請在監護人的陪同和同意下使用。如果監護人發現未成年人在未經同意的情況下向我們提供了個人資訊，請聯絡我們處理。</p>
+
+    <h2>9. 本條例的更新</h2>
+    <p>我們可能會根據功能變化或法律要求更新本條例。更新後的版本會發布在本頁面並更新日期。如變更涉及你的權利的重大調整，我們會在應用內以彈窗等方式提示你。</p>
+
+    <h2>10. 聯絡我們</h2>
+    <p>如對本條例或你的個人資訊有任何疑問、意見或請求，請傳送郵件至：<a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>。</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

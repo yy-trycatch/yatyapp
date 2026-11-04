@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私条例 - 印章相机 TimeStamp</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="菜单">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>产品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隐私条例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>用户协议</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#contact">联系方式</a></li>
+        <li class="lang">
+          <button>简体中文</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.html">~</a> / <a href="index.html">timestamp</a> / privacy.html</div>
+    <h1>印章相机 隐私条例</h1>
+    <p class="meta">生效日期：2026-11-04 · 更新日期：2026-11-04 · 适用应用：印章相机 / TimeStampCamera（com.yaty.stampcam）</p>
+
+    <p>印章相机（以下简称“本应用”）由 yatyapp 开发者（以下简称“我们”）开发和运营。我们非常重视你的个人信息保护。本条例说明本应用会访问哪些信息、为什么访问、信息存放在哪里，以及你可以如何管理这些信息。请在使用本应用前仔细阅读。</p>
+
+    <div class="note"><strong>要点速览：</strong>我们不运营用于收集用户数据的服务器。你拍摄的照片和视频只保存在设备相册中，不会上传。为生成水印，本应用会把位置坐标发送给第三方海拔和天气服务。本应用集成了 Google 提供的广告、统计、崩溃分析、登录和支付服务。</div>
+
+    <h2>1. 我们申请的权限及用途</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>权限</th><th>用途</th><th>是否必需</th></tr>
+        <tr><td>相机<br><code>CAMERA</code></td><td>取景、拍照和录像。</td><td>必需</td></tr>
+        <tr><td>麦克风<br><code>RECORD_AUDIO</code></td><td>录像时录制声音。仅在录像过程中使用。</td><td>录像需要</td></tr>
+        <tr><td>位置<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>在水印中显示地址、经纬度、海拔和天气。</td><td>可选，拒绝后水印不显示位置相关信息</td></tr>
+        <tr><td>照片和视频<br><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_EXTERNAL_STORAGE</code>（Android 12 及以下）</td><td>在应用内相册、分享时间线和拼图中读取你的照片和视频。</td><td>相册、拼图、分享需要</td></tr>
+        <tr><td>写入存储<br><code>WRITE_EXTERNAL_STORAGE</code>（仅 Android 9 及以下）</td><td>在旧版系统上把照片和视频保存到相册。</td><td>旧系统保存需要</td></tr>
+        <tr><td>媒体位置<br><code>ACCESS_MEDIA_LOCATION</code></td><td>清单中声明，当前版本未使用。</td><td>否</td></tr>
+        <tr><td>网络<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>查询海拔和天气；加载广告；Google 登录；购买验证；统计与崩溃分析。</td><td>部分功能需要</td></tr>
+        <tr><td>广告标识符<br><code>AD_ID</code></td><td>由广告和统计 SDK 用于广告展示、效果衡量和统计分析。</td><td>由系统设置控制</td></tr>
+        <tr><td>振动<br><code>VIBRATE</code></td><td>操作时的触感反馈。</td><td>否</td></tr>
+      </table>
+    </div>
+    <p>我们只在你使用相关功能时申请权限。你可以随时在系统“设置 &gt; 应用 &gt; 印章相机 &gt; 权限”中撤回授权，撤回后对应功能将无法使用，但不影响其他功能。</p>
+
+    <h2>2. 各功能如何处理你的信息</h2>
+    <h3>2.1 拍照与录像</h3>
+    <p>照片和视频通过系统媒体库保存到设备相册（“图片”和“影片”目录下的本应用相册）。保存在系统相册中的文件可被你授权访问相册的其他应用读取。本应用不会把照片或视频上传到我们或任何第三方服务器。生成预览时会在本应用缓存目录中写入临时图片。</p>
+
+    <h3>2.2 位置、海拔与天气</h3>
+    <ul>
+      <li>本应用只在相机界面读取设备最近一次的位置，不会在后台持续追踪位置。</li>
+      <li>地址由 Android 系统地理编码服务（<code>Geocoder</code>）解析，该服务可能由设备厂商或 Google 提供。</li>
+      <li><strong>海拔：</strong>当定位结果不含海拔数据时，本应用会把<strong>精确经纬度（小数点后 6 位）</strong>发送给 Open-Elevation 服务查询海拔，结果在本机内存缓存 10 分钟。</li>
+      <li><strong>天气：</strong>仅当你开启天气设置且当前水印包含天气字段时，本应用会把<strong>四舍五入到小数点后 2 位（约 1 公里精度）</strong>的经纬度发送给 Open-Meteo 天气服务，结果缓存 15 分钟。</li>
+      <li>位置信息只用于显示和写入水印，不会被单独保存或上传到我们的服务器。请注意：<strong>水印中的位置会随照片或视频一起被他人看到</strong>，分享前请确认。</li>
+    </ul>
+    <h3>2.3 水印内容与设备信息</h3>
+    <p>水印可包含你输入的自定义文字（如姓名、单位、备注）和你从相册选择的 Logo 图片，以及设备型号和制造商名称。这些内容只在本机用于绘制水印，并随你的照片或视频保存。</p>
+
+    <h3>2.4 编辑、拼图与分享</h3>
+    <ul>
+      <li>图片编辑、拼图和 PDF 导出均在本机完成。</li>
+      <li>拼图会读取照片的 EXIF 拍摄时间用于排序和显示；最近最多 30 份拼图草稿保存在本机。</li>
+      <li>分享水印模板时，本应用会在本机生成一张海报，包含水印样式、你填写的名称和单位，以及指向本应用 Google Play 页面的二维码。</li>
+      <li>所有分享都通过系统分享面板进行，接收方由你决定。</li>
+    </ul>
+
+    <h3>2.5 Google 登录（可选）</h3>
+    <p>登录不是使用本应用的前提，只在购买或恢复高级版时需要。登录后，本应用通过 Firebase Authentication 获得你的 Google 账号用户 ID、昵称、邮箱、手机号（如账号已绑定）和头像地址，仅用于标识购买身份，不会发送到我们自己的服务器。你可以随时退出登录。</p>
+
+    <h3>2.6 购买</h3>
+    <p>购买通过 Google Play 结算完成，我们无法获取你的银行卡或支付账户信息。高级版状态使用加密方式保存在本机。</p>
+
+    <h3>2.7 本地设置</h3>
+    <p>水印样式、字段开关、画幅、画质、语言等设置保存在本机。本应用允许 Android 系统备份，如你开启了系统备份，这些设置和拼图草稿可能随系统备份保存到你的 Google 账号云端（照片和视频不包含在本应用的备份中）。</p>
+
+    <h2>3. 第三方服务</h2>
+    <p>本应用集成了以下第三方服务。它们会按照各自的隐私政策独立处理信息，建议你阅读其政策。在你同意本条例之前，本应用不会初始化广告服务。</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>服务</th><th>提供方</th><th>用途</th><th>可能处理的信息</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>启动页开屏广告</td><td>广告标识符、设备型号与系统版本、IP 地址、广告互动数据</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>匿名使用统计</td><td>应用实例 ID、广告标识符、设备信息、应用使用事件</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>崩溃分析</td><td>崩溃日志、设备型号、系统版本、应用版本</td></tr>
+        <tr><td>Firebase Authentication / Google 登录</td><td>Google LLC</td><td>账号登录</td><td>Google 账号 ID、昵称、邮箱、手机号、头像</td></tr>
+        <tr><td>Google Play 结算</td><td>Google LLC</td><td>应用内购买</td><td>购买记录、订单信息</td></tr>
+        <tr><td>Open-Elevation</td><td>open-elevation.com</td><td>海拔查询</td><td>精确经纬度、IP 地址</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>天气查询</td><td>约 1 公里精度的经纬度、IP 地址</td></tr>
+        <tr><td>系统地理编码服务</td><td>设备厂商或 Google</td><td>经纬度转地址</td><td>经纬度</td></tr>
+      </table>
+    </div>
+    <p>相关政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用合作伙伴应用的信息</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隐私与安全</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo 条款</a> · <a href="https://open-elevation.com/" target="_blank" rel="noopener">Open-Elevation</a></p>
+    <h2>4. 信息的共享、转让与公开披露</h2>
+    <ul>
+      <li>我们不会出售你的个人信息。</li>
+      <li>除第 3 节所列第三方服务外，我们不会主动向任何第三方共享你的信息。</li>
+      <li>照片、视频和拼图只有在你主动分享时才会离开设备。</li>
+      <li>如法律法规或有权机关依法要求，我们会在法律要求的范围内配合，但我们本身并不持有你的照片、视频或位置数据。</li>
+    </ul>
+
+    <h2>5. 信息的存储与删除</h2>
+    <ul>
+      <li>照片和视频保存在系统相册中，卸载本应用不会删除它们，你可以在系统相册中自行删除。</li>
+      <li>设置、拼图草稿和购买状态保存在本应用数据中，清除应用数据或卸载本应用后删除。</li>
+      <li>海拔和天气查询结果只在内存中短时缓存，关闭应用后清除。</li>
+      <li>第三方服务收集的信息按其各自政策保存。</li>
+    </ul>
+
+    <h2>6. 你的权利</h2>
+    <ul>
+      <li><strong>管理权限：</strong>在系统设置中随时开启或关闭相机、麦克风、位置、相册权限。</li>
+      <li><strong>控制水印内容：</strong>在水印编辑中关闭地址、坐标、海拔、天气、设备型号等任意字段；关闭天气后不再请求天气服务。</li>
+      <li><strong>删除数据：</strong>在相册中删除照片和视频，在系统设置中清除本应用数据，或卸载本应用。</li>
+      <li><strong>退出登录：</strong>在应用内退出 Google 账号。</li>
+      <li><strong>管理广告：</strong>在 Android“设置 &gt; 隐私 &gt; 广告”中重置或删除广告 ID，关闭个性化广告。</li>
+      <li><strong>咨询与投诉：</strong>通过第 10 节的邮箱联系我们。</li>
+    </ul>
+
+    <h2>7. 信息安全</h2>
+    <p>本应用与海拔、天气服务及第三方 SDK 的通信均使用 HTTPS 加密传输；购买状态使用 Android 加密存储保存。请妥善保管你的设备和相册。</p>
+
+    <h2>8. 未成年人保护</h2>
+    <p>本应用不面向未满 14 周岁的儿童。如果你是未成年人，请在监护人的陪同和同意下使用。如果监护人发现未成年人在未经同意的情况下向我们提供了个人信息，请联系我们处理。</p>
+
+    <h2>9. 本条例的更新</h2>
+    <p>我们可能会根据功能变化或法律要求更新本条例。更新后的版本会发布在本页面并更新日期。如变更涉及你的权利的重大调整，我们会在应用内以弹窗等方式提示你。</p>
+
+    <h2>10. 联系我们</h2>
+    <p>如对本条例或你的个人信息有任何疑问、意见或请求，请发送邮件至：<a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>。</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>印章相機 TimeStamp - yatyapp</title>
+  <meta name="description" content="印章相機 TimeStamp：時間、地點、天氣、海拔浮水印相機，支援影片浮水印、圖片編輯與工作日報拼圖。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.zh-TW.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="選單">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>產品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隱私條例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>使用者協議</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.zh-TW.html#contact">聯絡方式</a></li>
+        <li class="lang">
+          <button>繁體中文</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./timestamp</span>
+    <h1>印章相機<br><em>TimeStamp</em></h1>
+    <p class="lead">拍照和錄影時自動加蓋時間、地點、座標、天氣、海拔浮水印。適合打卡、巡檢、施工記錄和工作彙報，照片和影片只儲存在你的相簿裡。</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.zh-TW.html">隱私條例</a>
+    <a class="btn ghost" href="terms.zh-TW.html">使用者協議</a>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>浮水印分類</span></div>
+      <div class="stat"><b>9</b><span>拼圖最多圖片數</span></div>
+      <div class="stat"><b>IMG / PDF</b><span>拼圖匯出格式</span></div>
+      <div class="stat"><b>0</b><span>媒體上傳</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">// 核心能力</p>
+      <div class="features">
+        <div class="feature"><h4>watermark</h4><p>時間、日期、地址、經緯度、海拔、天氣、裝置型號、自定義文字和 Logo，每個欄位都可單獨編輯或隱藏。</p></div>
+        <div class="feature"><h4>templates</h4><p>通用、生活、工作彙報、巡檢、考勤五類浮水印樣式，一鍵切換。</p></div>
+        <div class="feature"><h4>video_overlay</h4><p>錄影時浮水印實時燒錄進影片畫面，時間隨錄製同步更新。</p></div>
+        <div class="feature"><h4>camera</h4><p>前後攝像頭、變焦、閃光燈、亮度、定時拍攝，3:4 / 9:16 / 1:1 畫幅，流暢 / 標準 / 高畫質畫質。</p></div>
+        <div class="feature"><h4>collage</h4><p>工作日報、工作彙報、工作記錄、施工日誌等拼圖模板，最多 9 張圖，匯出圖片或 PDF。</p></div>
+        <div class="feature"><h4>editor</h4><p>裁剪、旋轉、亮度、對比度、飽和度，以及黑白、復古、鮮豔、冷調、暖調、褪色濾鏡。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <p class="section-sub">// 真機截圖</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/camera_play.png" alt="浮水印拍照" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / camera</span>
+            <h3>浮水印拍照</h3>
+            <p>取景時即可預覽浮水印效果。時間、日期、位置、座標、天氣、海拔、裝置型號自動填充，拍下即成片。</p>
+            <ul>
+              <li>定位只讀取當前位置，不在後臺追蹤</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="錄影模式" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / video</span>
+            <h3>浮水印錄影</h3>
+            <p>切到錄影模式，同一套浮水印樣式直接用於影片，夜景下同樣清晰可讀。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/videorecord_play.png" alt="錄製中" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / recording</span>
+            <h3>邊錄邊蓋章</h3>
+            <p>錄製過程中浮水印實時寫入每一幀畫面，錄完的影片不需要後期處理。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/picedit_play.png" alt="圖片編輯" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / editor</span>
+            <h3>圖片編輯</h3>
+            <p>對拍好的照片進行裁剪、旋轉、調色和濾鏡處理，儲存後回到相簿。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/wordpage_play.png" alt="工作日報拼圖" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / collage</span>
+            <h3>工作日報拼圖</h3>
+            <p>選擇模板，填寫今日工作和明日計劃，新增最多 9 張現場照片，一鍵生成日報圖片或 PDF。</p>
+            <ul>
+              <li>模板 / 排版 / 表頭可自由組合</li>
+              <li>歷史草稿自動儲存在本機</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.zh-TW.html">隱私條例</a> · <a href="terms.zh-TW.html">使用者協議</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

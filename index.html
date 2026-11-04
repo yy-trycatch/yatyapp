@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatyapp - 小而精的工具型 App</title>
+  <meta name="description" content="yatyapp 出品的工具型 App：分贝检测 SoundMeter、印章相机 TimeStamp。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="菜单">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>产品</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/index.html">SoundMeter</a></li>
+            <li><a href="timestamp/index.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隐私条例</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/privacy.html">SoundMeter</a></li>
+            <li><a href="timestamp/privacy.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>用户协议</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/terms.html">SoundMeter</a></li>
+            <li><a href="timestamp/terms.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">联系方式</a></li>
+        <li class="lang">
+          <button>简体中文</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <h1>Build small tools,<br><em>ship them well.</em></h1>
+    <p class="lead">yatyapp 是一个独立开发者的 App 主目录。我们只做解决具体问题的小工具：打开即用、数据留在本机、不需要注册账号。</p>
+    <a class="btn" href="#products">./list-products</a>
+    <a class="btn ghost" href="#contact">mailto --dev</a>
+
+    <div class="terminal" style="margin-top: 40px;">
+      <div class="terminal-bar">
+        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+        <span class="title">yatyapp@home: ~/apps</span>
+      </div>
+      <div class="terminal-body"><span class="p">$</span> ls -l ~/apps
+<span class="c">drwxr-xr-x  android  </span><span class="k">soundmeter/</span>   <span class="c"># 分贝检测：实时噪音测量 + 分贝相机</span>
+<span class="c">drwxr-xr-x  android  </span><span class="k">timestamp/</span>    <span class="c"># 印章相机：时间地点水印 + 工作拼图</span>
+
+<span class="p">$</span> cat ~/apps/*/manifest | grep -E "server|account"
+<span class="k">own_server</span>   = <span class="v">none</span>      <span class="c"># 不运营收集用户数据的服务器</span>
+<span class="k">account</span>      = <span class="v">optional</span>  <span class="c"># 仅购买/恢复会员时需要 Google 登录</span>
+<span class="k">storage</span>      = <span class="v">local</span>     <span class="c"># 照片、视频、记录默认保存在本机</span>
+
+<span class="p">$</span> <span class="cursor-block"></span></div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Products</h2>
+      <p class="section-sub">// 当前在维护的 2 款 Android 应用</p>
+
+      <div class="grid">
+        <article class="card product-card">
+          <img src="soundmeter/image/home_play.png" alt="分贝检测主界面">
+          <div>
+            <span class="tag">[soundmeter] v1.0.6 · Android 8.0+</span>
+            <h3>分贝检测 SoundMeter</h3>
+            <p>把手机变成噪音计。实时测量环境分贝，录制带分贝数据水印的视频，所有记录可回放、可导出 Excel。</p>
+            <ul>
+              <li>44.1kHz 采样，A / C 计权</li>
+              <li>分贝相机：视频叠加实时 dB 与时间地点</li>
+              <li>历史曲线点击跳转到对应视频时刻</li>
+              <li>声控自动录制，6 种界面语言</li>
+            </ul>
+            <div class="links">
+              <a href="soundmeter/index.html">介绍 -&gt;</a>
+              <a href="soundmeter/privacy.html">隐私</a>
+              <a href="soundmeter/terms.html">协议</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-card">
+          <img src="timestamp/image/camera_play.png" alt="印章相机拍照界面">
+          <div>
+            <span class="tag">[timestamp] v1.0 · Android 7.0+</span>
+            <h3>印章相机 TimeStamp</h3>
+            <p>拍照、录像时自动加盖时间、地点、天气、海拔水印，适合打卡、巡检、施工记录和工作汇报。</p>
+            <ul>
+              <li>通用 / 生活 / 工作 / 巡检 / 考勤水印模板</li>
+              <li>视频水印实时烧录进画面</li>
+              <li>工作日报拼图，导出图片或 PDF</li>
+              <li>内置图片编辑：裁剪、旋转、滤镜</li>
+            </ul>
+            <div class="links">
+              <a href="timestamp/index.html">介绍 -&gt;</a>
+              <a href="timestamp/privacy.html">隐私</a>
+              <a href="timestamp/terms.html">协议</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Principles</h2>
+      <p class="section-sub">// 写在每个 App 里的几条规则</p>
+      <div class="features">
+        <div class="feature"><h4>local_first()</h4><p>照片、视频、测量记录默认只存在你的设备上，我们没有用于收集用户数据的后台服务器。</p></div>
+        <div class="feature"><h4>least_privilege()</h4><p>只在用到功能时申请权限。定位等可选权限拒绝后，核心功能依然可用。</p></div>
+        <div class="feature"><h4>no_signup()</h4><p>不需要注册账号即可使用。只有购买或恢复会员时才需要 Google 登录。</p></div>
+        <div class="feature"><h4>transparent()</h4><p>隐私条例按实际代码逐项列出权限、第三方 SDK 和数据流向。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="terminal contact-box">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">contact.sh</span>
+        </div>
+        <div class="terminal-body" style="text-align: center; white-space: normal;">
+          <h2 class="section-title" style="margin-bottom: 18px;">Contact</h2>
+          <a class="mail" href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+          <p>Bug 反馈、功能建议、隐私问题或合作，都可以发邮件联系开发者。</p>
+          <a class="btn" href="mailto:zhangjunfeng020@gmail.com">$ send --mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · made with &lt;/&gt; and coffee
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

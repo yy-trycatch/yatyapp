@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分貝檢測 SoundMeter - yatyapp</title>
+  <meta name="description" content="分貝檢測 SoundMeter：實時噪音測量、分貝相機、歷史記錄與 Excel 匯出。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.zh-TW.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="選單">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>產品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隱私條例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>使用者協議</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.zh-TW.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.zh-TW.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.zh-TW.html#contact">聯絡方式</a></li>
+        <li class="lang">
+          <button>繁體中文</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>分貝檢測<br><em>SoundMeter</em></h1>
+    <p class="lead">把手機變成一臺隨身噪音計。實時測量環境分貝，錄製疊加分貝資料的影片，記錄可回放、可分享、可匯出 Excel。</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.zh-TW.html">隱私條例</a>
+    <a class="btn ghost" href="terms.zh-TW.html">使用者協議</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>音訊取樣率</span></div>
+      <div class="stat"><b>A / C</b><span>頻率計權</span></div>
+      <div class="stat"><b>6</b><span>介面語言</span></div>
+      <div class="stat"><b>0</b><span>自建資料伺服器</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">// 核心能力</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>44.1kHz 取樣，Goertzel 分頻段分析，支援 A / C 計權。儀表盤實時顯示當前、平均、最大、最小分貝和趨勢曲線。</p></div>
+        <div class="feature"><h4>db_camera</h4><p>錄影時把分貝統計、時間、地點、經緯度、天氣直接疊加進影片畫面，支援前後攝像頭和閃光燈。</p></div>
+        <div class="feature"><h4>history</h4><p>每次測量自動儲存。詳情頁展示分貝曲線，點選曲線上的點即可跳到影片對應時刻。</p></div>
+        <div class="feature"><h4>export</h4><p>一鍵打包 Excel（彙總 + 逐點資料）、影片和音訊，透過系統分享傳送。</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>聲控錄製：環境聲音達到設定閾值（預設 70dB，可在 40-140dB 調節）時自動開始錄製 3 分鐘。</p></div>
+        <div class="feature"><h4>i18n</h4><p>支援簡體中文、繁體中文、English、日本語、한국어、Tiếng Việt。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <p class="section-sub">// 真機截圖</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="啟動頁" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>啟動即測</h3>
+            <p>首次啟動展示隱私說明，同意後進入主介面，無需註冊帳號。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="噪音檢測主頁" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>實時噪音檢測</h3>
+            <p>儀表盤顯示當前分貝，下方同步顯示平均值、最大值、最小值和實時曲線。</p>
+            <ul>
+              <li>A 計權：貼近人耳感知</li>
+              <li>C 計權：保留更多低頻</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="分貝相機" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>分貝相機</h3>
+            <p>邊錄影邊測量。分貝數值、時長、時間、地點和天氣直接燒錄到影片畫面，回看和分享時一目瞭然。</p>
+            <ul>
+              <li>定位為可選權限，拒絕後照常錄製</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="歷史記錄列表" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>歷史記錄</h3>
+            <p>所有測量記錄按時間排列，顯示時長和最大、平均、最小分貝，資料儲存在本機。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="記錄詳情" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>曲線與影片聯動</h3>
+            <p>詳情頁展示完整分貝曲線和影片回放。點選曲線任意位置，影片跳到對應時刻。</p>
+            <ul>
+              <li>打包分享 Excel + 影片 + 音訊</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="我的頁面" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>我的</h3>
+            <p>Google 登入、會員中心、觀看獎勵廣告擴充記錄數、聲控閾值設定，以及隱私條例和使用者協議入口。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.zh-TW.html">隱私條例</a> · <a href="terms.zh-TW.html">使用者協議</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

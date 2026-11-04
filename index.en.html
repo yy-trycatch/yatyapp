@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatyapp - Small, focused utility apps</title>
+  <meta name="description" content="Utility apps by yatyapp: Decibel Meter (SoundMeter) and TimeStamp Camera.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.en.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Products</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/index.en.html">SoundMeter</a></li>
+            <li><a href="timestamp/index.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Privacy</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/privacy.en.html">SoundMeter</a></li>
+            <li><a href="timestamp/privacy.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Terms</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/terms.en.html">SoundMeter</a></li>
+            <li><a href="timestamp/terms.en.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="index.en.html#contact">Contact</a></li>
+        <li class="lang">
+          <button>English</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <h1>Build small tools,<br><em>ship them well.</em></h1>
+    <p class="lead">yatyapp is the home of a solo developer's apps. We only build small tools that solve one concrete problem: open and use, data stays on your device, no sign-up required.</p>
+    <a class="btn" href="#products">./list-products</a>
+    <a class="btn ghost" href="#contact">mailto --dev</a>
+
+    <div class="terminal" style="margin-top: 40px;">
+      <div class="terminal-bar">
+        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+        <span class="title">yatyapp@home: ~/apps</span>
+      </div>
+      <div class="terminal-body"><span class="p">$</span> ls -l ~/apps
+<span class="c">drwxr-xr-x  android  </span><span class="k">soundmeter/</span>   <span class="c"># Decibel Meter: live noise level + dB camera</span>
+<span class="c">drwxr-xr-x  android  </span><span class="k">timestamp/</span>    <span class="c"># TimeStamp Camera: time &amp; place watermarks + work collages</span>
+
+<span class="p">$</span> cat ~/apps/*/manifest | grep -E "server|account"
+<span class="k">own_server</span>   = <span class="v">none</span>      <span class="c"># no server that collects user data</span>
+<span class="k">account</span>      = <span class="v">optional</span>  <span class="c"># Google sign-in only to buy/restore Premium</span>
+<span class="k">storage</span>      = <span class="v">local</span>     <span class="c"># photos, videos and records stay on device</span>
+
+<span class="p">$</span> <span class="cursor-block"></span></div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Products</h2>
+      <p class="section-sub">// 2 Android apps under active maintenance</p>
+
+      <div class="grid">
+        <article class="card product-card">
+          <img src="soundmeter/image/home_play.png" alt="Decibel Meter home screen">
+          <div>
+            <span class="tag">[soundmeter] v1.0.6 · Android 8.0+</span>
+            <h3>Decibel Meter</h3>
+            <p>Turn your phone into a sound level meter. Measure ambient noise in real time, record videos with a live dB overlay, replay every record and export it to Excel.</p>
+            <ul>
+              <li>44.1kHz sampling, A / C weighting</li>
+              <li>dB camera: live dB, time and place on video</li>
+              <li>Tap the history chart to jump to that moment in the video</li>
+              <li>Voice-activated recording, 6 UI languages</li>
+            </ul>
+            <div class="links">
+              <a href="soundmeter/index.en.html">Details -&gt;</a>
+              <a href="soundmeter/privacy.en.html">Privacy</a>
+              <a href="soundmeter/terms.en.html">Terms</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-card">
+          <img src="timestamp/image/camera_play.png" alt="TimeStamp Camera capture screen">
+          <div>
+            <span class="tag">[timestamp] v1.0 · Android 7.0+</span>
+            <h3>TimeStamp Camera</h3>
+            <p>Stamp time, location, weather and altitude on photos and videos as you shoot. Built for check-ins, inspections, site logs and work reports.</p>
+            <ul>
+              <li>General / Life / Work / Inspection / Attendance templates</li>
+              <li>Watermarks burned into video in real time</li>
+              <li>Daily report collages, export as image or PDF</li>
+              <li>Built-in editor: crop, rotate, filters</li>
+            </ul>
+            <div class="links">
+              <a href="timestamp/index.en.html">Details -&gt;</a>
+              <a href="timestamp/privacy.en.html">Privacy</a>
+              <a href="timestamp/terms.en.html">Terms</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Principles</h2>
+      <p class="section-sub">// rules built into every app</p>
+      <div class="features">
+        <div class="feature"><h4>local_first()</h4><p>Photos, videos and measurements are stored only on your device by default. We run no backend that collects user data.</p></div>
+        <div class="feature"><h4>least_privilege()</h4><p>Permissions are requested only when a feature needs them. Core features keep working if you deny optional ones such as location.</p></div>
+        <div class="feature"><h4>no_signup()</h4><p>Use the apps without an account. Google sign-in is needed only to buy or restore Premium.</p></div>
+        <div class="feature"><h4>transparent()</h4><p>Our privacy policies list permissions, third-party SDKs and data flows exactly as the code implements them.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="terminal contact-box">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">contact.sh</span>
+        </div>
+        <div class="terminal-body" style="text-align: center; white-space: normal;">
+          <h2 class="section-title" style="margin-bottom: 18px;">Contact</h2>
+          <a class="mail" href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+          <p>Bug reports, feature ideas, privacy questions or partnerships: send the developer an email.</p>
+          <a class="btn" href="mailto:zhangjunfeng020@gmail.com">$ send --mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · made with &lt;/&gt; and coffee
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

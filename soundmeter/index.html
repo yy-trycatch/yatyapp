@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分贝检测 SoundMeter - yatyapp</title>
+  <meta name="description" content="分贝检测 SoundMeter：实时噪音测量、分贝相机、历史记录与 Excel 导出。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="菜单">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>产品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>隐私条例</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>用户协议</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#contact">联系方式</a></li>
+        <li class="lang">
+          <button>简体中文</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>分贝检测<br><em>SoundMeter</em></h1>
+    <p class="lead">把手机变成一台随身噪音计。实时测量环境分贝，录制叠加分贝数据的视频，记录可回放、可分享、可导出 Excel。</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.html">隐私条例</a>
+    <a class="btn ghost" href="terms.html">用户协议</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>音频采样率</span></div>
+      <div class="stat"><b>A / C</b><span>频率计权</span></div>
+      <div class="stat"><b>6</b><span>界面语言</span></div>
+      <div class="stat"><b>0</b><span>自建数据服务器</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">// 核心能力</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>44.1kHz 采样，Goertzel 分频段分析，支持 A / C 计权。仪表盘实时显示当前、平均、最大、最小分贝和趋势曲线。</p></div>
+        <div class="feature"><h4>db_camera</h4><p>录像时把分贝统计、时间、地点、经纬度、天气直接叠加进视频画面，支持前后摄像头和闪光灯。</p></div>
+        <div class="feature"><h4>history</h4><p>每次测量自动保存。详情页展示分贝曲线，点击曲线上的点即可跳到视频对应时刻。</p></div>
+        <div class="feature"><h4>export</h4><p>一键打包 Excel（汇总 + 逐点数据）、视频和音频，通过系统分享发送。</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>声控录制：环境声音达到设定阈值（默认 70dB，可在 40-140dB 调节）时自动开始录制 3 分钟。</p></div>
+        <div class="feature"><h4>i18n</h4><p>支持简体中文、繁体中文、English、日本語、한국어、Tiếng Việt。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <p class="section-sub">// 真机截图</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="启动页" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>启动即测</h3>
+            <p>首次启动展示隐私说明，同意后进入主界面，无需注册账号。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="噪音检测主页" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>实时噪音检测</h3>
+            <p>仪表盘显示当前分贝，下方同步显示平均值、最大值、最小值和实时曲线。</p>
+            <ul>
+              <li>A 计权：贴近人耳感知</li>
+              <li>C 计权：保留更多低频</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="分贝相机" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>分贝相机</h3>
+            <p>边录像边测量。分贝数值、时长、时间、地点和天气直接烧录到视频画面，回看和分享时一目了然。</p>
+            <ul>
+              <li>定位为可选权限，拒绝后照常录制</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="历史记录列表" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>历史记录</h3>
+            <p>所有测量记录按时间排列，显示时长和最大、平均、最小分贝，数据保存在本机。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="记录详情" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>曲线与视频联动</h3>
+            <p>详情页展示完整分贝曲线和视频回放。点击曲线任意位置，视频跳到对应时刻。</p>
+            <ul>
+              <li>打包分享 Excel + 视频 + 音频</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="我的页面" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>我的</h3>
+            <p>Google 登录、会员中心、观看激励广告扩充记录数、声控阈值设置，以及隐私条例和用户协议入口。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.html">隐私条例</a> · <a href="terms.html">用户协议</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>
