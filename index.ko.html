@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatyapp - 작고 명확한 유틸리티 앱</title>
+  <meta name="description" content="yatyapp의 유틸리티 앱: 데시벨 측정 Decibel Meter(SoundMeter)와 TimeStamp Camera.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.ko.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="메뉴">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>제품</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/index.ko.html">SoundMeter</a></li>
+            <li><a href="timestamp/index.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>개인정보</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/privacy.ko.html">SoundMeter</a></li>
+            <li><a href="timestamp/privacy.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>이용약관</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/terms.ko.html">SoundMeter</a></li>
+            <li><a href="timestamp/terms.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="index.ko.html#contact">문의</a></li>
+        <li class="lang">
+          <button>한국어</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <h1>Build small tools,<br><em>ship them well.</em></h1>
+    <p class="lead">yatyapp은 1인 개발자가 만든 앱들의 집입니다. 하나의 구체적인 문제를 해결하는 작은 도구만 만듭니다. 열면 바로 쓸 수 있고, 데이터는 기기에 남으며, 가입은 필요하지 않습니다.</p>
+    <a class="btn" href="#products">./list-products</a>
+    <a class="btn ghost" href="#contact">mailto --dev</a>
+
+    <div class="terminal" style="margin-top: 40px;">
+      <div class="terminal-bar">
+        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+        <span class="title">yatyapp@home: ~/apps</span>
+      </div>
+      <div class="terminal-body"><span class="p">$</span> ls -l ~/apps
+<span class="c">drwxr-xr-x  android  </span><span class="k">soundmeter/</span>   <span class="c"># 데시벨 측정: 실시간 소음 레벨 + dB 카메라</span>
+<span class="c">drwxr-xr-x  android  </span><span class="k">timestamp/</span>    <span class="c"># TimeStamp Camera: 시간·장소 워터마크 + 업무 콜라주</span>
+
+<span class="p">$</span> cat ~/apps/*/manifest | grep -E "server|account"
+<span class="k">own_server</span>   = <span class="v">none</span>      <span class="c"># 사용자 데이터를 수집하는 서버 없음</span>
+<span class="k">account</span>      = <span class="v">optional</span>  <span class="c"># 프리미엄 구매·복원 시에만 Google 로그인</span>
+<span class="k">storage</span>      = <span class="v">local</span>     <span class="c"># 사진, 동영상, 기록은 기기에만 저장</span>
+
+<span class="p">$</span> <span class="cursor-block"></span></div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">제품</h2>
+      <p class="section-sub">// 지속적으로 유지 관리 중인 Android 앱 2종</p>
+
+      <div class="grid">
+        <article class="card product-card">
+          <img src="soundmeter/image/home_play.png" alt="데시벨 측정 Decibel Meter 홈 화면">
+          <div>
+            <span class="tag">[soundmeter] v1.0.6 · Android 8.0+</span>
+            <h3>데시벨 측정 Decibel Meter</h3>
+            <p>휴대폰을 소음 측정기로 바꿔 줍니다. 주변 소음을 실시간으로 측정하고, 실시간 dB가 표시된 동영상을 녹화하며, 모든 기록을 다시 재생하고 Excel로 내보낼 수 있습니다.</p>
+            <ul>
+              <li>44.1kHz 샘플링, A / C 주파수 가중</li>
+              <li>dB 카메라: 동영상에 실시간 dB, 시간, 장소 표시</li>
+              <li>기록 차트를 탭하면 동영상의 해당 시점으로 이동</li>
+              <li>소리 감지 자동 녹음, 6개 UI 언어</li>
+            </ul>
+            <div class="links">
+              <a href="soundmeter/index.ko.html">자세히 보기 -&gt;</a>
+              <a href="soundmeter/privacy.ko.html">개인정보 처리방침</a>
+              <a href="soundmeter/terms.ko.html">이용약관</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-card">
+          <img src="timestamp/image/camera_play.png" alt="TimeStamp Camera 촬영 화면">
+          <div>
+            <span class="tag">[timestamp] v1.0 · Android 7.0+</span>
+            <h3>TimeStamp Camera</h3>
+            <p>촬영하는 즉시 사진과 동영상에 시간, 위치, 날씨, 고도를 새겨 넣습니다. 출퇴근 체크, 점검, 현장 기록, 업무 보고를 위해 만들었습니다.</p>
+            <ul>
+              <li>일반 / 일상 / 업무 / 점검 / 근태 템플릿</li>
+              <li>워터마크를 동영상에 실시간으로 합성</li>
+              <li>일일 보고 콜라주, 이미지 또는 PDF로 내보내기</li>
+              <li>내장 편집기: 자르기, 회전, 필터</li>
+            </ul>
+            <div class="links">
+              <a href="timestamp/index.ko.html">자세히 보기 -&gt;</a>
+              <a href="timestamp/privacy.ko.html">개인정보 처리방침</a>
+              <a href="timestamp/terms.ko.html">이용약관</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="section-title">원칙</h2>
+      <p class="section-sub">// 모든 앱에 적용되는 규칙</p>
+      <div class="features">
+        <div class="feature"><h4>local_first()</h4><p>사진, 동영상, 측정 데이터는 기본적으로 사용자의 기기에만 저장됩니다. 사용자 데이터를 수집하는 서버는 운영하지 않습니다.</p></div>
+        <div class="feature"><h4>least_privilege()</h4><p>권한은 해당 기능에 필요할 때만 요청합니다. 위치 등 선택 권한을 거부해도 핵심 기능은 계속 사용할 수 있습니다.</p></div>
+        <div class="feature"><h4>no_signup()</h4><p>계정 없이 앱을 사용할 수 있습니다. Google 로그인은 프리미엄을 구매하거나 복원할 때만 필요합니다.</p></div>
+        <div class="feature"><h4>transparent()</h4><p>개인정보 처리방침에는 권한, 제3자 SDK, 데이터 흐름을 코드에 구현된 그대로 기재합니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="terminal contact-box">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">contact.sh</span>
+        </div>
+        <div class="terminal-body" style="text-align: center; white-space: normal;">
+          <h2 class="section-title" style="margin-bottom: 18px;">문의</h2>
+          <a class="mail" href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+          <p>버그 신고, 기능 제안, 개인정보 관련 문의, 협업 제안은 개발자에게 이메일을 보내 주십시오.</p>
+          <a class="btn" href="mailto:zhangjunfeng020@gmail.com">$ send --mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · made with &lt;/&gt; and coffee
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

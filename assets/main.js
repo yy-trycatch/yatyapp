@@ -2,9 +2,19 @@
   var LANG_KEY = "yatyapp_lang";
 
   function browserLang() {
-    var l = (navigator.language || "").toLowerCase();
-    if (l.indexOf("zh") !== 0) return "en";
-    return /tw|hk|mo|hant/.test(l) ? "zh-TW" : "zh-CN";
+    var list = navigator.languages && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var l = list[i].toLowerCase();
+      if (l.indexOf("zh") === 0) return /tw|hk|mo|hant/.test(l) ? "zh-TW" : "zh-CN";
+      if (l.indexOf("ja") === 0) return "ja";
+      if (l.indexOf("ko") === 0) return "ko";
+      if (l.indexOf("vi") === 0) return "vi";
+      if (l.indexOf("th") === 0) return "th";
+      if (l.indexOf("en") === 0) return "en";
+    }
+    return "en";
   }
 
   function getSaved() {

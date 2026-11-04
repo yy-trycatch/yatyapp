@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeStamp Camera - yatyapp</title>
+  <meta name="description" content="TimeStamp Camera：時刻・位置情報・天気・標高の透かし、動画への透かし、写真エディター、日報コラージュ。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.ja.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="メニュー">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>製品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>プライバシー</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>利用規約</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.ja.html#contact">お問い合わせ</a></li>
+        <li class="lang">
+          <button>日本語</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./timestamp</span>
+    <h1>TimeStamp<br><em>Camera</em></h1>
+    <p class="lead">TimeStamp Camera（タイムスタンプカメラ）は、すべての写真と動画に時刻・住所・座標・天気・標高をスタンプします。打刻、点検、現場記録、作業報告のために作りました。撮影したデータは、お客様自身のギャラリーに保存されます。</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.ja.html">プライバシーポリシー</a>
+    <a class="btn ghost" href="terms.ja.html">利用規約</a>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>透かしのカテゴリー</span></div>
+      <div class="stat"><b>9</b><span>コラージュ 1 枚あたりの写真</span></div>
+      <div class="stat"><b>IMG / PDF</b><span>コラージュの書き出し形式</span></div>
+      <div class="stat"><b>0</b><span>メディアのアップロード</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">機能</h2>
+      <p class="section-sub">// 主な機能</p>
+      <div class="features">
+        <div class="feature"><h4>watermark</h4><p>時刻、日付、住所、座標、標高、天気、端末のモデル、カスタムテキスト、ロゴに対応。各項目は編集も非表示もできます。</p></div>
+        <div class="feature"><h4>templates</h4><p>一般、生活、作業報告、点検、勤怠のスタイルを用意。ワンタップで切り替えられます。</p></div>
+        <div class="feature"><h4>video_overlay</h4><p>録画中に透かしを動画へ焼き込み、時計もそのまま進み続けます。</p></div>
+        <div class="feature"><h4>camera</h4><p>前面／背面カメラ、ズーム、フラッシュ、明るさ、タイマー、3:4 / 9:16 / 1:1 の縦横比、流れ重視 / 標準 / 高画質の画質設定。</p></div>
+        <div class="feature"><h4>collage</h4><p>日報、作業報告、作業記録、工事記録のテンプレート。写真は最大 9 枚まで、画像または PDF で書き出せます。</p></div>
+        <div class="feature"><h4>editor</h4><p>切り抜き、回転、明るさ、コントラスト、彩度の調整に加え、モノクロ、セピア、ビビッド、クール、ウォーム、フェードのフィルター。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">スクリーンショット</h2>
+      <p class="section-sub">// 実機で撮影</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/camera_play.png" alt="透かし入りの写真" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / camera</span>
+            <h3>透かし入りの写真</h3>
+            <p>ファインダー上で透かしをリアルタイムに確認できます。時刻、日付、場所、座標、天気、標高、端末のモデルは自動で入力されます。</p>
+            <ul>
+              <li>位置情報は必要なときにだけ読み取り、バックグラウンドで追跡しません</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="動画モード" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / video</span>
+            <h3>透かし入りの動画</h3>
+            <p>動画モードに切り替えると、同じ透かしのスタイルが映像にも適用され、夜間でもはっきり読み取れます。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/videorecord_play.png" alt="録画中" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / recording</span>
+            <h3>録画しながら焼き込み</h3>
+            <p>録画中、透かしは各フレームに書き込まれます。後処理は不要です。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/picedit_play.png" alt="写真エディター" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / editor</span>
+            <h3>写真エディター</h3>
+            <p>撮影した写真を切り抜き、回転、色調整し、フィルターを適用して、ギャラリーに保存し直せます。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/wordpage_play.png" alt="日報コラージュ" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / collage</span>
+            <h3>日報コラージュ</h3>
+            <p>テンプレートを選び、本日の作業と翌日の予定を入力し、現場の写真を最大 9 枚まで追加して、報告書の画像または PDF を作成できます。</p>
+            <ul>
+              <li>テンプレート、レイアウト、ヘッダーは自由に組み合わせ可能</li>
+              <li>下書きは端末内に保存されます</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.ja.html">プライバシーポリシー</a> · <a href="terms.ja.html">利用規約</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

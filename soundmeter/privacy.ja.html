@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - デシベル測定 Decibel Meter（SoundMeter）</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.ja.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="メニュー">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>製品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>プライバシー</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>利用規約</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.ja.html#contact">お問い合わせ</a></li>
+        <li class="lang">
+          <button>日本語</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="privacy.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="privacy.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="privacy.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="privacy.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.ja.html">~</a> / <a href="index.ja.html">soundmeter</a> / privacy.html</div>
+    <h1>デシベル測定 Decibel Meter プライバシーポリシー</h1>
+    <p class="meta">施行日：2026-11-04 · 最終更新日：2026-11-04 · アプリ：デシベル測定 / Decibel Meter (com.yaty.audiometry)</p>
+
+    <p>デシベル測定 Decibel Meter（以下「本アプリ」）は、yatyapp の開発者（以下「当方」）が開発・運営しています。本ポリシーでは、本アプリがどの情報にアクセスし、何のために利用し、どこに保存し、お客様がどのように管理できるかを説明します。本アプリをご利用になる前にお読みください。</p>
+
+    <div class="note"><strong>要旨：</strong>当方は、ユーザーデータを収集するサーバーを一切運用していません。測定記録、音声、動画は、既定ではお客様の端末内にのみ保存されます。本アプリは、広告・分析・クラッシュレポート・ログイン・決済のために Google のサービスを組み込んでおり、これらは各社のプライバシーポリシーに基づき一部の端末情報および利用情報を処理します。</div>
+
+    <h2>1. 権限とその必要性</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>権限</th><th>目的</th><th>必須ですか？</th></tr>
+        <tr><td>マイク<br><code>RECORD_AUDIO</code></td><td>周囲の音を取得してデシベルを計算します。測定中および録画中は、音声を端末内の音声ファイルに録音します。音声感知録画のために音量を監視します。</td><td>騒音チェックと dB カメラには必須</td></tr>
+        <tr><td>カメラ<br><code>CAMERA</code></td><td>dB カメラで動画を録画します。</td><td>dB カメラのみ</td></tr>
+        <tr><td>位置情報<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>dB カメラの透かしに住所・座標・天気を表示します。</td><td>任意。許可しなくても録画できます</td></tr>
+        <tr><td>ネットワーク<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>天気の取得、広告、Google ログイン、購入の検証、分析とクラッシュレポート。</td><td>一部の機能に必要</td></tr>
+        <tr><td>広告 ID<br><code>AD_ID</code></td><td>広告および分析 SDK が、広告配信、表示頻度の制御、効果測定、分析のために使用します。</td><td>システム設定で管理できます</td></tr>
+        <tr><td>ストレージ<br><code>READ/WRITE_EXTERNAL_STORAGE</code></td><td>マニフェストに宣言していますが、実行時に要求することはありません。ファイルはすべて、権限が不要な本アプリ専用のディレクトリに書き込みます。</td><td>いいえ</td></tr>
+      </table>
+    </div>
+    <p>当方は、関連する機能をお使いになるときにのみ権限を要求します。権限は「設定 &gt; アプリ &gt; デシベル測定 &gt; 権限」からいつでも取り消せます。取り消した場合、該当する機能は動作しなくなりますが、他の機能には影響しません。</p>
+
+    <h2>2. 各機能における情報の取り扱い</h2>
+    <h3>2.1 騒音チェック</h3>
+    <p>本アプリは 44.1kHz でマイクを読み取り、端末上でデシベルを計算します。測定を開始すると、本アプリは<strong>元の音を WAV 音声ファイルに録音し</strong>、dB データとともにひとつの記録として保存します。音声が当方やサードパーティのサーバーへアップロードされることはありません。</p>
+
+    <h3>2.2 dB カメラ</h3>
+    <p>撮影中、本アプリは映像と音を記録し、dB の統計値・時刻・住所・座標・天気を動画のフレームに書き込みます。動画ファイルと音声ファイルはお客様の端末内に保存されます。なお、<strong>透かしに表示された位置情報は、その動画を共有した相手にも見えます</strong>のでご注意ください。</p>
+
+    <h3>2.3 音声感知録画</h3>
+    <p>本アプリのメイン画面が前面に表示されている間、本アプリはマイクの音量を継続的に監視します。音量がお客様の設定したしきい値（既定は 70dB、40dB から 140dB の範囲で調整可能）に達すると、本アプリは<strong>自動的に 3 分間の記録を行います</strong>。騒音チェックのタブでは音声のみ、dB カメラのタブでは動画と音声を記録します。記録したデータは端末内に留まります。本アプリがバックグラウンドに移ると監視は停止します。</p>
+
+    <h3>2.4 位置情報と天気</h3>
+    <ul>
+      <li>本アプリが端末の最後に取得された位置情報を読み取るのは dB カメラのときだけで、バックグラウンドで位置情報を追跡することはありません。</li>
+      <li>住所は Android システムのジオコーダー（<code>Geocoder</code>）によって解決されます。これは端末メーカーまたは Google が提供している場合があります。</li>
+      <li>天気については、本アプリは<strong>小数第 2 位（約 1km 相当）に丸めた座標</strong>を Open-Meteo の天気サービスへ送信し、取得結果を端末内に 15 分間キャッシュします。</li>
+      <li>位置情報は、動画の透かしの表示および焼き込みにのみ利用します。記録データベースに別途保存することはありません。</li>
+    </ul>
+    <h3>2.5 履歴と共有</h3>
+    <p>各記録は、端末内の SQLite データベースに保存されます。保存される内容は、開始時刻と終了時刻、測定時間、最小 / 平均 / 最大の dB、dB の時系列データ、および関連する動画ファイルと音声ファイルのパスです。共有の際は、本アプリが端末上で Excel シート、動画、音声をまとめた ZIP を作成し、システムの共有シートに引き渡します。誰に渡すかはお客様が決定します。</p>
+
+    <h3>2.6 Google ログイン（任意）</h3>
+    <p>本アプリの利用にログインは必要ありません。ログインが必要なのは、会員資格を購入または復元するときだけです。ログイン後、本アプリは Firebase Authentication を通じて、お客様の Google アカウントのユーザー ID、表示名、メールアドレス、電話番号（アカウントに紐付いている場合）、プロフィール画像の URL を受け取ります。本アプリはこれらのうち名前と画像をマイページに表示し、アカウントの識別情報を購入の完了および復元のために利用するだけです。これらの情報が当方のいかなるサーバーにも送信されることはありません。マイページからいつでもログアウトできます。</p>
+
+    <h3>2.7 会員資格と広告による記録枠</h3>
+    <p>購入処理は Google Play Billing が行い、当方がお客様のカード情報や決済アカウントの情報を受け取ることはありません。会員資格の状態、およびリワード広告で獲得した追加の記録枠は、暗号化された形で端末内に保存されます。</p>
+
+    <h2>3. サードパーティのサービス</h2>
+    <p>本アプリは以下のサービスを組み込んでいます。これらは当方が管理できない各社のプライバシーポリシーに基づいて、独自に情報を処理します。各ポリシーもあわせてご確認ください。</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>サービス</th><th>提供者</th><th>目的</th><th>処理される可能性のある情報</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>アプリ起動時広告とリワード広告</td><td>広告 ID、端末のモデルと OS バージョン、IP アドレス、広告の操作履歴</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>匿名の利用統計</td><td>アプリインスタンス ID、広告 ID、端末情報、アプリの利用イベント</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>クラッシュレポート</td><td>クラッシュログ、端末のモデル、OS バージョン、アプリのバージョン</td></tr>
+        <tr><td>Firebase Authentication / Google Sign-In</td><td>Google LLC</td><td>アカウントのログイン</td><td>Google アカウント ID、名前、メールアドレス、電話番号、プロフィール画像</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>アプリ内購入</td><td>購入履歴、注文情報</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>天気の取得</td><td>約 1km 精度の座標、IP アドレス</td></tr>
+        <tr><td>システムのジオコーダー</td><td>端末メーカーまたは Google</td><td>座標から住所への変換</td><td>座標</td></tr>
+      </table>
+    </div>
+    <p>各ポリシー：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google がパートナーのアプリから得た情報を使用する方法</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo 利用規約</a></p>
+
+    <h2>4. 情報の共有、移転および開示</h2>
+    <ul>
+      <li>当方はお客様の個人情報を販売しません。</li>
+      <li>第 3 条に記載したサービスを除き、当方はお客様の情報をいかなる第三者にも共有しません。</li>
+      <li>記録、音声、動画が端末の外に出るのは、お客様ご自身が共有した場合だけです。</li>
+      <li>当方は、法令に基づく権限ある機関からの適法な要請には法律の定めに従って協力しますが、お客様の記録データを保有していません。</li>
+    </ul>
+
+    <h2>5. 保存と削除</h2>
+    <ul>
+      <li>記録、音声、動画は、お客様が記録を削除する、本アプリのデータを消去する、または本アプリをアンインストールするまで、本アプリの専用ディレクトリに保存されます。</li>
+      <li>本アプリでは Android の自動バックアップを無効にしているため、お客様の記録がクラウドにバックアップされることはありません。</li>
+      <li>現在の仕様では、本アプリ内で記録を削除すると一覧からは消えますが、関連する音声ファイル・動画ファイルおよび共有用の一時ファイルは、システム設定から本アプリのデータを消去するか本アプリをアンインストールするまで、本アプリの専用ディレクトリに残る場合があります。</li>
+      <li>サードパーティのサービスが収集した情報は、各社のポリシーに従って保持されます。</li>
+    </ul>
+
+    <h2>6. お客様の権利</h2>
+    <ul>
+      <li><strong>権限の管理：</strong>マイク、カメラ、位置情報へのアクセスは、システム設定からいつでも有効・無効を切り替えられます。</li>
+      <li><strong>音声感知録画の制御：</strong>しきい値はマイページで調整できます。</li>
+      <li><strong>データの削除：</strong>本アプリ内で記録を削除する、システム設定から本アプリのデータを消去する、または本アプリをアンインストールしてください。</li>
+      <li><strong>ログアウト：</strong>マイページから Google アカウントをログアウトできます。</li>
+      <li><strong>広告の管理：</strong>「Android の設定 &gt; プライバシー &gt; 広告」から広告 ID をリセットまたは削除し、パーソナライズ広告をオプトアウトできます。</li>
+      <li><strong>ご質問・苦情：</strong>第 10 条に記載のメールアドレスまでご連絡ください。</li>
+    </ul>
+
+    <h2>7. セキュリティ</h2>
+    <p>天気サービスおよびサードパーティ SDK との通信には HTTPS を使用しています。会員資格の状態などの重要な設定は、Android の暗号化ストレージに保存しています。端末内の録音・録画データが第三者に見られないよう、端末自体の安全管理をお願いします。</p>
+
+    <h2>8. お子様について</h2>
+    <p>本アプリは 14 歳未満のお子様を対象としていません。未成年の方は、保護者の同意と指導のもとでご利用ください。保護者の方が、未成年者が同意なしに当方へ個人情報を提供したとお考えの場合は、当方までご連絡ください。</p>
+
+    <h2>9. 本ポリシーの変更</h2>
+    <p>当方は、機能の変更や法令の要請に応じて本ポリシーを更新することがあります。更新版は新しい日付とともに本ページに掲載します。お客様の権利に影響する重要な変更については、ダイアログの表示などの方法でアプリ内でお知らせします。</p>
+
+    <h2>10. お問い合わせ</h2>
+    <p>本ポリシーまたはお客様の個人情報に関するご質問、ご意見、ご要望は、次のメールアドレスまでお送りください：<a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>。</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

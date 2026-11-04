@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - TimeStamp Camera</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.ja.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="メニュー">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>製品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>プライバシー</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>利用規約</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.ja.html#contact">お問い合わせ</a></li>
+        <li class="lang">
+          <button>日本語</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="privacy.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="privacy.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="privacy.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="privacy.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.ja.html">~</a> / <a href="index.ja.html">timestamp</a> / privacy.html</div>
+    <h1>TimeStamp Camera プライバシーポリシー</h1>
+    <p class="meta">施行日：2026-11-04 · 最終更新日：2026-11-04 · アプリ：TimeStampCamera (com.yaty.stampcam)</p>
+
+    <p>TimeStamp Camera（以下「本アプリ」）は、yatyapp の開発者（以下「当方」）が開発・運営しています。本ポリシーでは、本アプリがどの情報にアクセスし、何のために利用し、どこに保存し、お客様がどのように管理できるかを説明します。本アプリをご利用になる前にお読みください。</p>
+
+    <div class="note"><strong>要旨：</strong>当方は、ユーザーデータを収集するサーバーを一切運用していません。お客様の写真と動画は端末のギャラリーにのみ保存され、アップロードされることはありません。透かしを作成するため、本アプリは位置情報の座標をサードパーティの標高サービスおよび天気サービスへ送信します。また本アプリは、広告・分析・クラッシュレポート・ログイン・決済のために Google のサービスを組み込んでいます。</div>
+
+    <h2>1. 権限とその必要性</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>権限</th><th>目的</th><th>必須ですか？</th></tr>
+        <tr><td>カメラ<br><code>CAMERA</code></td><td>ファインダーの表示、写真と動画の撮影。</td><td>必須</td></tr>
+        <tr><td>マイク<br><code>RECORD_AUDIO</code></td><td>動画の音声を録音します。動画の録画中にのみ使用します。</td><td>動画の録画に必要</td></tr>
+        <tr><td>位置情報<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>透かしに住所・座標・標高・天気を表示します。</td><td>任意。許可しない場合、位置関連の項目は空欄になります</td></tr>
+        <tr><td>写真と動画<br><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_EXTERNAL_STORAGE</code>（Android 12 以下）</td><td>アプリ内のギャラリー、日付別の共有、コラージュのために、お客様の写真と動画を読み取ります。</td><td>ギャラリー、コラージュ、共有に必要</td></tr>
+        <tr><td>ストレージへの書き込み<br><code>WRITE_EXTERNAL_STORAGE</code>（Android 9 以下のみ）</td><td>古い Android バージョンで、写真と動画をギャラリーに保存します。</td><td>古い Android での保存に必要</td></tr>
+        <tr><td>メディアの位置情報<br><code>ACCESS_MEDIA_LOCATION</code></td><td>マニフェストに宣言していますが、現在のバージョンでは使用していません。</td><td>いいえ</td></tr>
+        <tr><td>ネットワーク<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>標高と天気の取得、広告、Google ログイン、購入の検証、分析とクラッシュレポート。</td><td>一部の機能に必要</td></tr>
+        <tr><td>広告 ID<br><code>AD_ID</code></td><td>広告および分析 SDK が、広告配信、効果測定、分析のために使用します。</td><td>システム設定で管理できます</td></tr>
+        <tr><td>バイブレーション<br><code>VIBRATE</code></td><td>操作時の触覚フィードバック。</td><td>いいえ</td></tr>
+      </table>
+    </div>
+    <p>当方は、関連する機能をお使いになるときにのみ権限を要求します。権限は「設定 &gt; アプリ &gt; TimeStamp Camera &gt; 権限」からいつでも取り消せます。取り消した場合、該当する機能は動作しなくなりますが、他の機能には影響しません。</p>
+
+    <h2>2. 各機能における情報の取り扱い</h2>
+    <h3>2.1 写真と動画</h3>
+    <p>写真と動画は、システムのメディアストアを通じて端末のギャラリーに保存されます（Pictures および Movies の下にある本アプリのアルバム）。システムのギャラリーにあるファイルは、お客様がギャラリーへのアクセスを許可した他のアプリからも読み取られる可能性があります。本アプリが写真や動画を当方またはサードパーティのサーバーへアップロードすることは一切ありません。プレビューの際は、本アプリのキャッシュディレクトリに一時的な画像を書き込みます。</p>
+
+    <h3>2.2 位置情報、標高、天気</h3>
+    <ul>
+      <li>本アプリが端末の最後に取得された位置情報を読み取るのはカメラ画面のときだけで、バックグラウンドで位置情報を追跡することはありません。</li>
+      <li>住所は Android システムのジオコーダー（<code>Geocoder</code>）によって解決されます。これは端末メーカーまたは Google が提供している場合があります。</li>
+      <li><strong>標高：</strong>取得した位置情報に標高が含まれていない場合、本アプリは<strong>正確な座標（小数第 6 位）</strong>を Open-Elevation のサービスへ送信し、取得結果をメモリ内に 10 分間キャッシュします。</li>
+      <li><strong>天気：</strong>天気の設定が有効で、かつ現在の透かしに天気の項目が含まれている場合にのみ、本アプリは<strong>小数第 2 位（約 1km 相当）に丸めた座標</strong>を Open-Meteo の天気サービスへ送信し、取得結果を 15 分間キャッシュします。</li>
+      <li>位置情報は、透かしの表示および焼き込みにのみ利用します。別途保存したり、当方のいかなるサーバーへもアップロードしたりすることはありません。なお、<strong>透かしに含まれる位置情報は、その写真や動画を共有した相手にも見えます</strong>のでご注意ください。</li>
+    </ul>
+    <h3>2.3 透かしの内容と端末情報</h3>
+    <p>透かしには、お客様が入力したカスタムテキスト（氏名、組織名、メモなど）、ギャラリーから選んだロゴ画像、端末のモデルおよびメーカー名が含まれる場合があります。これらは透かしを描画するために端末上でのみ利用され、お客様の写真や動画とともに保存されます。</p>
+
+    <h3>2.4 編集、コラージュ、共有</h3>
+    <ul>
+      <li>写真の編集、コラージュ、PDF への書き出しは、すべて端末上で処理されます。</li>
+      <li>コラージュでは、並び替えと表示のために写真の EXIF の撮影時刻を読み取ります。コラージュの下書きは、最近のものが最大 30 件まで端末内に保存されます。</li>
+      <li>透かしのテンプレートを共有すると、本アプリは端末上で、透かしのスタイル、お客様が入力した氏名と組織名、および本アプリの Google Play ページへのリンクを含む QR コードを載せたポスター画像を作成します。</li>
+      <li>共有はすべてシステムの共有シートを経由します。誰に渡すかはお客様が決定します。</li>
+    </ul>
+
+    <h3>2.5 Google ログイン（任意）</h3>
+    <p>本アプリの利用にログインは必要ありません。ログインが必要なのは、プレミアムを購入または復元するときだけです。ログイン後、本アプリは Firebase Authentication を通じて、お客様の Google アカウントのユーザー ID、表示名、メールアドレス、電話番号（アカウントに紐付いている場合）、プロフィール画像の URL を受け取ります。本アプリはこれらを購入者の識別のためにのみ利用し、当方のいかなるサーバーにも送信しません。いつでもログアウトできます。</p>
+
+    <h3>2.6 購入</h3>
+    <p>購入処理は Google Play Billing が行い、当方がお客様のカード情報や決済アカウントの情報を受け取ることはありません。プレミアムの状態は、暗号化された形で端末内に保存されます。</p>
+
+    <h3>2.7 端末内の設定</h3>
+    <p>透かしのスタイル、各項目の表示切り替え、縦横比、画質、言語などの設定は端末内に保存されます。本アプリは Android のバックアップを許可しているため、システムのバックアップが有効な場合、これらの設定とコラージュの下書きがお客様の Google アカウントにバックアップされることがあります（写真と動画は本アプリのバックアップ対象には含まれません）。</p>
+
+    <h2>3. サードパーティのサービス</h2>
+    <p>本アプリは以下のサービスを組み込んでいます。これらは各社のプライバシーポリシーに基づいて独自に情報を処理します。各ポリシーもあわせてご確認ください。なお本アプリは、お客様が本ポリシーに同意するまで広告を初期化しません。</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>サービス</th><th>提供者</th><th>目的</th><th>処理される可能性のある情報</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>起動時のアプリ起動時広告</td><td>広告 ID、端末のモデルと OS バージョン、IP アドレス、広告の操作履歴</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>匿名の利用統計</td><td>アプリインスタンス ID、広告 ID、端末情報、アプリの利用イベント</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>クラッシュレポート</td><td>クラッシュログ、端末のモデル、OS バージョン、アプリのバージョン</td></tr>
+        <tr><td>Firebase Authentication / Google Sign-In</td><td>Google LLC</td><td>アカウントのログイン</td><td>Google アカウント ID、名前、メールアドレス、電話番号、プロフィール画像</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>アプリ内購入</td><td>購入履歴、注文情報</td></tr>
+        <tr><td>Open-Elevation</td><td>open-elevation.com</td><td>標高の取得</td><td>正確な座標、IP アドレス</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>天気の取得</td><td>約 1km 精度の座標、IP アドレス</td></tr>
+        <tr><td>システムのジオコーダー</td><td>端末メーカーまたは Google</td><td>座標から住所への変換</td><td>座標</td></tr>
+      </table>
+    </div>
+    <p>各ポリシー：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google がパートナーのアプリから得た情報を使用する方法</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Open-Meteo 利用規約</a> · <a href="https://open-elevation.com/" target="_blank" rel="noopener">Open-Elevation</a></p>
+    <h2>4. 情報の共有、移転および開示</h2>
+    <ul>
+      <li>当方はお客様の個人情報を販売しません。</li>
+      <li>第 3 条に記載したサービスを除き、当方はお客様の情報をいかなる第三者にも共有しません。</li>
+      <li>写真、動画、コラージュが端末の外に出るのは、お客様ご自身が共有した場合だけです。</li>
+      <li>当方は、法令に基づく権限ある機関からの適法な要請には法律の定めに従って協力しますが、お客様の写真、動画、位置情報データを保有していません。</li>
+    </ul>
+
+    <h2>5. 保存と削除</h2>
+    <ul>
+      <li>写真と動画はシステムのギャラリーに保存されます。本アプリをアンインストールしても削除されないため、ギャラリーからお客様ご自身で削除できます。</li>
+      <li>設定、コラージュの下書き、購入状態は本アプリのデータ内に保存され、本アプリのデータを消去するか本アプリをアンインストールすると削除されます。</li>
+      <li>標高と天気の取得結果はメモリ内に短時間だけキャッシュされ、本アプリの終了時に消去されます。</li>
+      <li>サードパーティのサービスが収集した情報は、各社のポリシーに従って保持されます。</li>
+    </ul>
+
+    <h2>6. お客様の権利</h2>
+    <ul>
+      <li><strong>権限の管理：</strong>カメラ、マイク、位置情報、ギャラリーへのアクセスは、システム設定からいつでも有効・無効を切り替えられます。</li>
+      <li><strong>透かしの内容の制御：</strong>住所、座標、標高、天気、端末のモデルなどの項目は、透かしのエディターで非表示にできます。天気をオフにすると、天気の取得リクエストも行われません。</li>
+      <li><strong>データの削除：</strong>ギャラリーから写真と動画を削除する、システム設定から本アプリのデータを消去する、または本アプリをアンインストールしてください。</li>
+      <li><strong>ログアウト：</strong>本アプリ内から Google アカウントをログアウトできます。</li>
+      <li><strong>広告の管理：</strong>「Android の設定 &gt; プライバシー &gt; 広告」から広告 ID をリセットまたは削除し、パーソナライズ広告をオプトアウトできます。</li>
+      <li><strong>ご質問・苦情：</strong>第 10 条に記載のメールアドレスまでご連絡ください。</li>
+    </ul>
+
+    <h2>7. セキュリティ</h2>
+    <p>標高サービス、天気サービスおよびサードパーティ SDK との通信には HTTPS を使用しています。購入状態は Android の暗号化ストレージに保存しています。端末とギャラリーの安全管理をお願いします。</p>
+
+    <h2>8. お子様について</h2>
+    <p>本アプリは 14 歳未満のお子様を対象としていません。未成年の方は、保護者の同意と指導のもとでご利用ください。保護者の方が、未成年者が同意なしに当方へ個人情報を提供したとお考えの場合は、当方までご連絡ください。</p>
+
+    <h2>9. 本ポリシーの変更</h2>
+    <p>当方は、機能の変更や法令の要請に応じて本ポリシーを更新することがあります。更新版は新しい日付とともに本ページに掲載します。お客様の権利に影響する重要な変更については、ダイアログの表示などの方法でアプリ内でお知らせします。</p>
+
+    <h2>10. お問い合わせ</h2>
+    <p>本ポリシーまたはお客様の個人情報に関するご質問、ご意見、ご要望は、次のメールアドレスまでお送りください：<a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>。</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

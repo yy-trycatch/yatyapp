@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デシベル測定 Decibel Meter（SoundMeter） - yatyapp</title>
+  <meta name="description" content="デシベル測定 Decibel Meter：リアルタイムの騒音測定、dB カメラ、履歴記録、Excel 書き出し。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.ja.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="メニュー">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>製品</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>プライバシー</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>利用規約</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.ja.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.ja.html#contact">お問い合わせ</a></li>
+        <li class="lang">
+          <button>日本語</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>デシベル測定 Decibel Meter<br><em>SoundMeter</em></h1>
+    <p class="lead">ポケットに入る騒音計です。周囲の騒音をリアルタイムで測定し、dB データを重ねた動画を録画して、すべての記録を再生・共有したり Excel に書き出したりできます。</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.ja.html">プライバシーポリシー</a>
+    <a class="btn ghost" href="terms.ja.html">利用規約</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>サンプリング周波数</span></div>
+      <div class="stat"><b>A / C</b><span>周波数重み付け</span></div>
+      <div class="stat"><b>6</b><span>対応 UI 言語</span></div>
+      <div class="stat"><b>0</b><span>自社のデータサーバー</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">機能</h2>
+      <p class="section-sub">// 主な機能</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>44.1kHz でサンプリングし、Goertzel 法による帯域分析と A / C 特性の重み付けを行います。メーターには現在値・平均・最大・最小の dB と、リアルタイムの推移グラフを表示します。</p></div>
+        <div class="feature"><h4>db_camera</h4><p>録画中に dB の統計値・時刻・住所・座標・天気を動画へ焼き込みます。前面／背面カメラとフラッシュに対応しています。</p></div>
+        <div class="feature"><h4>history</h4><p>測定はすべて自動で保存されます。詳細画面では dB の推移グラフを表示し、グラフ上の任意の点をタップするとその瞬間の動画へ移動します。</p></div>
+        <div class="feature"><h4>export</h4><p>Excel シート（サマリー＋各測定点のデータ）、動画、音声をまとめて、システムの共有シートから送信できます。</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>音声感知録画：音量がしきい値（既定 70dB、40〜140dB で調整可能）に達すると、3 分間の録画が自動的に始まります。</p></div>
+        <div class="feature"><h4>i18n</h4><p>簡体字中国語、繁体字中国語、英語、日本語、韓国語、ベトナム語に対応しています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">スクリーンショット</h2>
+      <p class="section-sub">// 実機で撮影</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="スプラッシュ画面" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>開いてすぐ測定</h3>
+            <p>初回起動時にプライバシーに関する説明を表示します。同意するとそのまま測定画面へ進みます。アカウントは不要です。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="騒音チェック" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>リアルタイムの騒音チェック</h3>
+            <p>メーターに現在の音量を表示し、その下に平均・最大・最小とリアルタイムの推移グラフを表示します。</p>
+            <ul>
+              <li>A 特性：人の聴感に近い測定</li>
+              <li>C 特性：低音域をより多く残した測定</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="dB カメラ" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>dB カメラ</h3>
+            <p>撮影しながら測定します。dB 値、経過時間、時刻、場所、天気が動画へ焼き込まれるため、再生時や共有時にもそのまま確認できます。</p>
+            <ul>
+              <li>位置情報は任意です。許可しなくても録画できます</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="履歴一覧" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>履歴</h3>
+            <p>すべての記録を時系列で一覧表示し、測定時間と最大 / 平均 / 最小の dB を表示します。データは端末内に保存されます。</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="記録の詳細" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>グラフと動画が連動</h3>
+            <p>詳細画面では dB の推移グラフ全体と動画の再生を表示します。グラフのどこをタップしても、動画がその瞬間まで移動します。</p>
+            <ul>
+              <li>Excel ＋ 動画 ＋ 音声をひとつにまとめて共有</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="マイページ" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>マイページ</h3>
+            <p>Google ログイン、会員センター、リワード広告による記録枠の追加、音声感知のしきい値設定、プライバシーポリシーと利用規約を用意しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.ja.html">プライバシーポリシー</a> · <a href="terms.ja.html">利用規約</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

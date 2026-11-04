@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatyapp - 小さく、丁寧に作るユーティリティアプリ</title>
+  <meta name="description" content="yatyapp のユーティリティアプリ：デシベル測定 Decibel Meter（SoundMeter）と TimeStamp Camera。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.ja.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="メニュー">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>製品</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/index.ja.html">SoundMeter</a></li>
+            <li><a href="timestamp/index.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>プライバシー</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/privacy.ja.html">SoundMeter</a></li>
+            <li><a href="timestamp/privacy.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>利用規約</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/terms.ja.html">SoundMeter</a></li>
+            <li><a href="timestamp/terms.ja.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="index.ja.html#contact">お問い合わせ</a></li>
+        <li class="lang">
+          <button>日本語</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <h1>Build small tools,<br><em>ship them well.</em></h1>
+    <p class="lead">yatyapp は、個人開発者がつくったアプリを公開している場所です。ひとつの具体的な課題だけを解決する小さなツールしかつくりません。開いてすぐ使えて、データは端末の中に留まり、会員登録も不要です。</p>
+    <a class="btn" href="#products">./list-products</a>
+    <a class="btn ghost" href="#contact">mailto --dev</a>
+
+    <div class="terminal" style="margin-top: 40px;">
+      <div class="terminal-bar">
+        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+        <span class="title">yatyapp@home: ~/apps</span>
+      </div>
+      <div class="terminal-body"><span class="p">$</span> ls -l ~/apps
+<span class="c">drwxr-xr-x  android  </span><span class="k">soundmeter/</span>   <span class="c"># デシベル測定 Decibel Meter：リアルタイム騒音レベル + dB カメラ</span>
+<span class="c">drwxr-xr-x  android  </span><span class="k">timestamp/</span>    <span class="c"># TimeStamp Camera：時刻と場所の透かし + 作業コラージュ</span>
+
+<span class="p">$</span> cat ~/apps/*/manifest | grep -E "server|account"
+<span class="k">own_server</span>   = <span class="v">none</span>      <span class="c"># ユーザーデータを収集するサーバーはありません</span>
+<span class="k">account</span>      = <span class="v">optional</span>  <span class="c"># Google ログインはプレミアムの購入・復元のときだけ</span>
+<span class="k">storage</span>      = <span class="v">local</span>     <span class="c"># 写真・動画・記録は端末内に保存</span>
+
+<span class="p">$</span> <span class="cursor-block"></span></div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">プロダクト</h2>
+      <p class="section-sub">// 継続メンテナンス中の Android アプリ 2 本</p>
+
+      <div class="grid">
+        <article class="card product-card">
+          <img src="soundmeter/image/home_play.png" alt="デシベル測定 Decibel Meter のホーム画面">
+          <div>
+            <span class="tag">[soundmeter] v1.0.6 · Android 8.0+</span>
+            <h3>デシベル測定 Decibel Meter</h3>
+            <p>スマートフォンを騒音計に変えます。周囲の騒音をリアルタイムで測定し、dB 値を重ねた動画を録画し、すべての記録を再生して Excel に書き出せます。</p>
+            <ul>
+              <li>44.1kHz サンプリング、A / C 特性の周波数重み付け</li>
+              <li>dB カメラ：dB 値・時刻・場所を動画に表示</li>
+              <li>履歴のグラフをタップすると動画のその瞬間へジャンプ</li>
+              <li>音声感知録画、UI は 6 言語対応</li>
+            </ul>
+            <div class="links">
+              <a href="soundmeter/index.ja.html">詳細 -&gt;</a>
+              <a href="soundmeter/privacy.ja.html">プライバシー</a>
+              <a href="soundmeter/terms.ja.html">利用規約</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-card">
+          <img src="timestamp/image/camera_play.png" alt="TimeStamp Camera の撮影画面">
+          <div>
+            <span class="tag">[timestamp] v1.0 · Android 7.0+</span>
+            <h3>TimeStamp Camera</h3>
+            <p>撮影しながら、写真や動画に時刻・位置情報・天気・標高をスタンプします。打刻、点検、現場記録、作業報告のために作りました。</p>
+            <ul>
+              <li>一般 / 生活 / 作業報告 / 点検 / 勤怠のテンプレート</li>
+              <li>録画中に透かしを動画へリアルタイムで焼き込み</li>
+              <li>日報コラージュを画像または PDF で書き出し</li>
+              <li>内蔵エディター：切り抜き、回転、フィルター</li>
+            </ul>
+            <div class="links">
+              <a href="timestamp/index.ja.html">詳細 -&gt;</a>
+              <a href="timestamp/privacy.ja.html">プライバシー</a>
+              <a href="timestamp/terms.ja.html">利用規約</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">開発の原則</h2>
+      <p class="section-sub">// すべてのアプリに組み込んでいるルール</p>
+      <div class="features">
+        <div class="feature"><h4>local_first()</h4><p>写真・動画・測定データは、既定では端末内にのみ保存されます。ユーザーデータを収集するバックエンドは一切運用していません。</p></div>
+        <div class="feature"><h4>least_privilege()</h4><p>権限は、その機能に必要になったときだけ要求します。位置情報などの任意の権限を拒否しても、主要機能はそのまま使えます。</p></div>
+        <div class="feature"><h4>no_signup()</h4><p>アカウントなしで利用できます。Google ログインが必要なのは、プレミアムを購入または復元するときだけです。</p></div>
+        <div class="feature"><h4>transparent()</h4><p>プライバシーポリシーには、権限・サードパーティ SDK・データの流れを、コードの実装どおりに記載しています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="terminal contact-box">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">contact.sh</span>
+        </div>
+        <div class="terminal-body" style="text-align: center; white-space: normal;">
+          <h2 class="section-title" style="margin-bottom: 18px;">お問い合わせ</h2>
+          <a class="mail" href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+          <p>不具合のご報告、機能のご要望、プライバシーに関するご質問、協業のご相談は、開発者までメールでお送りください。</p>
+          <a class="btn" href="mailto:zhangjunfeng020@gmail.com">$ send --mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · made with &lt;/&gt; and coffee
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeStamp Camera - yatyapp</title>
+  <meta name="description" content="TimeStamp Camera: ลายน้ำเวลา ตำแหน่ง สภาพอากาศ และระดับความสูง ลายน้ำบนวิดีโอ เครื่องมือแก้ไขรูปภาพ และคอลลาจรายงานประจำวัน">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.th.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="เมนู">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>ผลิตภัณฑ์</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.th.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>ความเป็นส่วนตัว</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.th.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>ข้อกำหนด</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.th.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.th.html#contact">ติดต่อ</a></li>
+        <li class="lang">
+          <button>ไทย</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./timestamp</span>
+    <h1>TimeStamp<br><em>Camera</em></h1>
+    <p class="lead">กล้องประทับเวลาที่ประทับเวลา ที่อยู่ พิกัด สภาพอากาศ และระดับความสูงลงบนทุกรูปภาพและวิดีโอ ออกแบบมาเพื่อการเช็กอิน การตรวจงาน บันทึกหน้างาน และรายงานการทำงาน ไฟล์ภาพและวิดีโอของคุณยังคงอยู่ในคลังภาพของคุณเอง</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.th.html">นโยบายความเป็นส่วนตัว</a>
+    <a class="btn ghost" href="terms.th.html">ข้อกำหนดการใช้งาน</a>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>หมวดของลายน้ำ</span></div>
+      <div class="stat"><b>9</b><span>รูปภาพต่อหนึ่งคอลลาจ</span></div>
+      <div class="stat"><b>IMG / PDF</b><span>รูปแบบส่งออกคอลลาจ</span></div>
+      <div class="stat"><b>0</b><span>การอัปโหลดไฟล์สื่อ</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">ฟีเจอร์</h2>
+      <p class="section-sub">// ความสามารถหลัก</p>
+      <div class="features">
+        <div class="feature"><h4>watermark</h4><p>เวลา วันที่ ที่อยู่ พิกัด ระดับความสูง สภาพอากาศ รุ่นอุปกรณ์ ข้อความที่กำหนดเอง และโลโก้ ทุกช่องข้อมูลแก้ไขหรือซ่อนได้</p></div>
+        <div class="feature"><h4>templates</h4><p>รูปแบบทั่วไป ชีวิตประจำวัน รายงานงาน ตรวจงาน และลงเวลาทำงาน สลับได้ด้วยการแตะครั้งเดียว</p></div>
+        <div class="feature"><h4>video_overlay</h4><p>ลายน้ำถูกฝังลงในวิดีโอขณะบันทึก และนาฬิกาในลายน้ำยังเดินต่อไปพร้อมกัน</p></div>
+        <div class="feature"><h4>camera</h4><p>กล้องหน้า/กล้องหลัง ซูม แฟลช ความสว่าง ตั้งเวลาถ่าย อัตราส่วนภาพ 3:4 / 9:16 / 1:1 และคุณภาพแบบ Smooth / Standard / HD</p></div>
+        <div class="feature"><h4>collage</h4><p>เทมเพลตรายงานประจำวัน รายงานงาน บันทึกการทำงาน และบันทึกงานก่อสร้าง ใส่รูปได้สูงสุด 9 รูป ส่งออกเป็นรูปภาพหรือ PDF</p></div>
+        <div class="feature"><h4>editor</h4><p>ครอป หมุน ปรับความสว่าง คอนทราสต์ ความอิ่มตัวของสี พร้อมฟิลเตอร์ Mono, Sepia, Vivid, Cool, Warm และ Fade</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">ภาพหน้าจอ</h2>
+      <p class="section-sub">// ถ่ายจากเครื่องจริง</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/camera_play.png" alt="รูปภาพพร้อมลายน้ำ" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / camera</span>
+            <h3>ถ่ายรูปพร้อมลายน้ำ</h3>
+            <p>เห็นลายน้ำแบบสดในช่องมองภาพ เวลา วันที่ สถานที่ พิกัด สภาพอากาศ ระดับความสูง และรุ่นอุปกรณ์จะถูกเติมให้อัตโนมัติ</p>
+            <ul>
+              <li>อ่านตำแหน่งที่ตั้งเฉพาะเมื่อจำเป็น ไม่มีการติดตามในเบื้องหลัง</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="โหมดวิดีโอ" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / video</span>
+            <h3>ถ่ายวิดีโอพร้อมลายน้ำ</h3>
+            <p>สลับไปโหมดวิดีโอแล้วลายน้ำรูปแบบเดียวกันจะถูกใช้กับวิดีโอของคุณ อ่านได้ชัดเจนแม้ในเวลากลางคืน</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/videorecord_play.png" alt="กำลังบันทึกวิดีโอ" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / recording</span>
+            <h3>ประทับลายน้ำขณะบันทึก</h3>
+            <p>ลายน้ำถูกเขียนลงในทุกเฟรมขณะที่คุณบันทึก ไม่ต้องประมวลผลเพิ่มภายหลัง</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/picedit_play.png" alt="เครื่องมือแก้ไขรูปภาพ" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / editor</span>
+            <h3>เครื่องมือแก้ไขรูปภาพ</h3>
+            <p>ครอป หมุน ปรับสี และใส่ฟิลเตอร์ให้ภาพที่ถ่าย แล้วบันทึกกลับไปที่คลังภาพ</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/wordpage_play.png" alt="คอลลาจรายงานประจำวัน" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / collage</span>
+            <h3>คอลลาจรายงานประจำวัน</h3>
+            <p>เลือกเทมเพลต กรอกงานที่ทำวันนี้และแผนงานวันถัดไป ใส่รูปหน้างานได้สูงสุด 9 รูป แล้วสร้างเป็นรูปภาพรายงานหรือไฟล์ PDF</p>
+            <ul>
+              <li>ผสมเทมเพลต เลย์เอาต์ และหัวรายงานได้อย่างอิสระ</li>
+              <li>แบบร่างถูกบันทึกไว้บนเครื่องของคุณ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.th.html">นโยบายความเป็นส่วนตัว</a> · <a href="terms.th.html">ข้อกำหนดการใช้งาน</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

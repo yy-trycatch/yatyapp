@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데시벨 측정 Decibel Meter (SoundMeter) - yatyapp</title>
+  <meta name="description" content="데시벨 측정 Decibel Meter: 실시간 소음 측정, dB 카메라, 측정 기록, Excel 내보내기.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.ko.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="메뉴">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>제품</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.ko.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>개인정보</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.ko.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>이용약관</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.ko.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.ko.html#contact">문의</a></li>
+        <li class="lang">
+          <button>한국어</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>데시벨 측정 Decibel Meter<br><em>SoundMeter</em></h1>
+    <p class="lead">주머니 속 소음 측정기입니다. 주변 소음을 실시간으로 측정하고, dB 데이터가 입혀진 동영상을 녹화한 뒤, 모든 기록을 다시 재생하거나 공유하고 Excel로 내보낼 수 있습니다.</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.ko.html">개인정보 처리방침</a>
+    <a class="btn ghost" href="terms.ko.html">이용약관</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>샘플링 레이트</span></div>
+      <div class="stat"><b>A / C</b><span>주파수 가중</span></div>
+      <div class="stat"><b>6</b><span>UI 언어</span></div>
+      <div class="stat"><b>0</b><span>자체 데이터 서버</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">주요 기능</h2>
+      <p class="section-sub">// 핵심 기능</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>44.1kHz 샘플링에 Goertzel 대역 분석과 A / C 가중을 적용합니다. 계기판에는 현재, 평균, 최대, 최소 dB와 실시간 추이 그래프가 표시됩니다.</p></div>
+        <div class="feature"><h4>db_camera</h4><p>녹화하는 동안 dB 통계, 시간, 주소, 좌표, 날씨를 동영상에 합성합니다. 전면·후면 카메라와 플래시를 지원합니다.</p></div>
+        <div class="feature"><h4>history</h4><p>모든 측정이 자동으로 저장됩니다. 상세 화면에서는 dB 곡선을 그려 주며, 곡선의 어느 지점이든 탭하면 동영상의 해당 시점으로 이동합니다.</p></div>
+        <div class="feature"><h4>export</h4><p>Excel 시트(요약 + 지점별 데이터), 동영상, 오디오를 하나로 묶어 시스템 공유 시트를 통해 보낼 수 있습니다.</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>소리 감지 자동 녹음: 소음 레벨이 설정한 기준값(기본 70dB, 40~140dB 범위에서 조절 가능)에 도달하면 3분 동안 자동으로 녹음이 시작됩니다.</p></div>
+        <div class="feature"><h4>i18n</h4><p>중국어 간체, 중국어 번체, 영어, 일본어, 한국어, 베트남어를 지원합니다.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">스크린샷</h2>
+      <p class="section-sub">// 실제 기기에서 촬영</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="시작 화면" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>열면 바로 측정</h3>
+            <p>처음 실행하면 개인정보 안내가 표시됩니다. 동의하면 곧바로 측정 화면으로 이동합니다. 계정은 필요하지 않습니다.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="소음 측정" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>실시간 소음 측정</h3>
+            <p>계기판에 현재 소음 레벨이 표시되고, 그 아래에 평균, 최대, 최소값과 실시간 곡선이 함께 나타납니다.</p>
+            <ul>
+              <li>A 가중: 사람의 청각에 가깝습니다</li>
+              <li>C 가중: 저주파를 더 많이 반영합니다</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="dB 카메라" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>dB 카메라</h3>
+            <p>촬영하면서 동시에 측정합니다. dB 값, 녹화 시간, 일시, 장소, 날씨가 동영상에 합성되므로 다시 재생할 때나 공유할 때도 그대로 확인할 수 있습니다.</p>
+            <ul>
+              <li>위치 정보는 선택 사항이며, 없어도 녹화할 수 있습니다</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="기록 목록" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>측정 기록</h3>
+            <p>모든 기록이 시간순으로 정리되어 측정 시간과 최대 / 평균 / 최소 dB가 함께 표시됩니다. 데이터는 사용자의 기기에 저장됩니다.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="기록 상세" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>동영상과 연동되는 차트</h3>
+            <p>상세 화면에서는 전체 dB 곡선과 동영상 재생을 함께 볼 수 있습니다. 곡선의 아무 지점이나 탭하면 동영상이 그 시점으로 이동합니다.</p>
+            <ul>
+              <li>Excel + 동영상 + 오디오를 하나로 묶어 공유</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="내 정보 화면" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>내 정보</h3>
+            <p>Google 로그인, 멤버십 센터, 기록 횟수를 늘리는 리워드 광고, 소리 감지 기준값 설정, 그리고 개인정보 처리방침과 이용약관을 제공합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.ko.html">개인정보 처리방침</a> · <a href="terms.ko.html">이용약관</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

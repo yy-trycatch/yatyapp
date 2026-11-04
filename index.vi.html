@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatyapp - Những ứng dụng công cụ nhỏ và tập trung</title>
+  <meta name="description" content="Các ứng dụng công cụ của yatyapp: Máy đo decibel (Decibel Meter / SoundMeter) và TimeStamp Camera.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.vi.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Sản phẩm</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/index.vi.html">SoundMeter</a></li>
+            <li><a href="timestamp/index.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Quyền riêng tư</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/privacy.vi.html">SoundMeter</a></li>
+            <li><a href="timestamp/privacy.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Điều khoản</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/terms.vi.html">SoundMeter</a></li>
+            <li><a href="timestamp/terms.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="index.vi.html#contact">Liên hệ</a></li>
+        <li class="lang">
+          <button>Tiếng Việt</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <h1>Build small tools,<br><em>ship them well.</em></h1>
+    <p class="lead">yatyapp là nơi tập hợp các ứng dụng của một nhà phát triển độc lập. Chúng tôi chỉ làm những công cụ nhỏ giải quyết một vấn đề cụ thể: mở là dùng được, dữ liệu nằm trên thiết bị của bạn, không cần đăng ký.</p>
+    <a class="btn" href="#products">./list-products</a>
+    <a class="btn ghost" href="#contact">mailto --dev</a>
+
+    <div class="terminal" style="margin-top: 40px;">
+      <div class="terminal-bar">
+        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+        <span class="title">yatyapp@home: ~/apps</span>
+      </div>
+      <div class="terminal-body"><span class="p">$</span> ls -l ~/apps
+<span class="c">drwxr-xr-x  android  </span><span class="k">soundmeter/</span>   <span class="c"># Máy đo decibel: mức ồn theo thời gian thực + camera dB</span>
+<span class="c">drwxr-xr-x  android  </span><span class="k">timestamp/</span>    <span class="c"># TimeStamp Camera: hình chìm thời gian &amp; địa điểm + ghép ảnh báo cáo</span>
+
+<span class="p">$</span> cat ~/apps/*/manifest | grep -E "server|account"
+<span class="k">own_server</span>   = <span class="v">none</span>      <span class="c"># không có máy chủ nào thu thập dữ liệu người dùng</span>
+<span class="k">account</span>      = <span class="v">optional</span>  <span class="c"># chỉ cần đăng nhập Google để mua/khôi phục Premium</span>
+<span class="k">storage</span>      = <span class="v">local</span>     <span class="c"># ảnh, video và bản ghi luôn ở trên thiết bị</span>
+
+<span class="p">$</span> <span class="cursor-block"></span></div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Sản phẩm</h2>
+      <p class="section-sub">// 2 ứng dụng Android đang được bảo trì thường xuyên</p>
+
+      <div class="grid">
+        <article class="card product-card">
+          <img src="soundmeter/image/home_play.png" alt="Màn hình chính của Máy đo decibel">
+          <div>
+            <span class="tag">[soundmeter] v1.0.6 · Android 8.0+</span>
+            <h3>Máy đo decibel (Decibel Meter)</h3>
+            <p>Biến điện thoại của bạn thành một máy đo mức âm thanh. Đo tiếng ồn môi trường theo thời gian thực, quay video kèm lớp hiển thị dB trực tiếp, xem lại từng bản ghi và xuất ra Excel.</p>
+            <ul>
+              <li>Lấy mẫu 44.1kHz, trọng số tần số A / C</li>
+              <li>Camera dB: hiển thị dB, thời gian và địa điểm ngay trên video</li>
+              <li>Chạm vào biểu đồ lịch sử để nhảy tới đúng thời điểm đó trong video</li>
+              <li>Ghi âm theo ngưỡng âm thanh, 6 ngôn ngữ giao diện</li>
+            </ul>
+            <div class="links">
+              <a href="soundmeter/index.vi.html">Chi tiết -&gt;</a>
+              <a href="soundmeter/privacy.vi.html">Quyền riêng tư</a>
+              <a href="soundmeter/terms.vi.html">Điều khoản</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-card">
+          <img src="timestamp/image/camera_play.png" alt="Màn hình chụp ảnh của TimeStamp Camera">
+          <div>
+            <span class="tag">[timestamp] v1.0 · Android 7.0+</span>
+            <h3>TimeStamp Camera</h3>
+            <p>In thời gian, vị trí, thời tiết và độ cao lên ảnh và video ngay khi chụp. Được thiết kế cho điểm danh, kiểm tra, ghi nhận hiện trường và báo cáo công việc.</p>
+            <ul>
+              <li>Mẫu Thông dụng / Đời sống / Công việc / Kiểm tra / Điểm danh</li>
+              <li>Hình chìm được ghi trực tiếp vào video theo thời gian thực</li>
+              <li>Ghép ảnh báo cáo hằng ngày, xuất ra ảnh hoặc PDF</li>
+              <li>Trình chỉnh sửa tích hợp: cắt, xoay, bộ lọc</li>
+            </ul>
+            <div class="links">
+              <a href="timestamp/index.vi.html">Chi tiết -&gt;</a>
+              <a href="timestamp/privacy.vi.html">Quyền riêng tư</a>
+              <a href="timestamp/terms.vi.html">Điều khoản</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Nguyên tắc</h2>
+      <p class="section-sub">// những quy tắc được tích hợp trong mọi ứng dụng</p>
+      <div class="features">
+        <div class="feature"><h4>local_first()</h4><p>Theo mặc định, ảnh, video và kết quả đo chỉ được lưu trên thiết bị của bạn. Chúng tôi không vận hành máy chủ nào để thu thập dữ liệu người dùng.</p></div>
+        <div class="feature"><h4>least_privilege()</h4><p>Quyền chỉ được yêu cầu khi một tính năng thực sự cần đến. Các tính năng cốt lõi vẫn hoạt động nếu bạn từ chối những quyền không bắt buộc như vị trí.</p></div>
+        <div class="feature"><h4>no_signup()</h4><p>Dùng ứng dụng mà không cần tài khoản. Bạn chỉ cần đăng nhập Google khi muốn mua hoặc khôi phục Premium.</p></div>
+        <div class="feature"><h4>transparent()</h4><p>Chính sách quyền riêng tư của chúng tôi liệt kê các quyền, SDK của bên thứ ba và luồng dữ liệu đúng như cách mã nguồn triển khai.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="terminal contact-box">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">contact.sh</span>
+        </div>
+        <div class="terminal-body" style="text-align: center; white-space: normal;">
+          <h2 class="section-title" style="margin-bottom: 18px;">Liên hệ</h2>
+          <a class="mail" href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+          <p>Báo lỗi, góp ý tính năng, thắc mắc về quyền riêng tư hoặc đề nghị hợp tác: hãy gửi email cho nhà phát triển.</p>
+          <a class="btn" href="mailto:zhangjunfeng020@gmail.com">$ send --mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · được làm bằng &lt;/&gt; và cà phê
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

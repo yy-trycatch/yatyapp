@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách quyền riêng tư - TimeStamp Camera</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.vi.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Sản phẩm</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.vi.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Quyền riêng tư</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.vi.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Điều khoản</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.vi.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.vi.html#contact">Liên hệ</a></li>
+        <li class="lang">
+          <button>Tiếng Việt</button>
+          <ul class="submenu">
+            <li><a href="privacy.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="privacy.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="privacy.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="privacy.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="privacy.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="privacy.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="privacy.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="crumb"><a href="../index.vi.html">~</a> / <a href="index.vi.html">timestamp</a> / privacy.html</div>
+    <h1>Chính sách quyền riêng tư của TimeStamp Camera</h1>
+    <p class="meta">Hiệu lực: 2026-11-04 · Cập nhật lần cuối: 2026-11-04 · Ứng dụng: TimeStampCamera / 印章相机 (com.yaty.stampcam)</p>
+
+    <p>TimeStamp Camera (sau đây gọi là "Ứng dụng") do nhà phát triển yatyapp ("chúng tôi") phát triển và vận hành. Chính sách này giải thích Ứng dụng truy cập những thông tin nào, vì mục đích gì, thông tin được lưu ở đâu và bạn có thể kiểm soát ra sao. Vui lòng đọc chính sách này trước khi sử dụng Ứng dụng.</p>
+
+    <div class="note"><strong>Tóm tắt:</strong> Chúng tôi không vận hành máy chủ nào thu thập dữ liệu người dùng. Ảnh và video của bạn chỉ được lưu trong thư viện trên thiết bị và không bao giờ được tải lên. Để tạo hình chìm, Ứng dụng gửi toạ độ vị trí tới các dịch vụ độ cao và thời tiết của bên thứ ba. Ứng dụng tích hợp các dịch vụ của Google cho quảng cáo, phân tích, báo cáo sự cố, đăng nhập và thanh toán.</div>
+
+    <h2>1. Các quyền và lý do chúng tôi cần</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Quyền</th><th>Mục đích</th><th>Có bắt buộc?</th></tr>
+        <tr><td>Máy ảnh<br><code>CAMERA</code></td><td>Khung ngắm, chụp ảnh và quay video.</td><td>Bắt buộc</td></tr>
+        <tr><td>Micrô<br><code>RECORD_AUDIO</code></td><td>Thu âm thanh cho video. Chỉ được dùng trong lúc quay video.</td><td>Quay video</td></tr>
+        <tr><td>Vị trí<br><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td><td>Hiển thị địa chỉ, toạ độ, độ cao và thời tiết trong hình chìm.</td><td>Tuỳ chọn; các trường vị trí sẽ để trống nếu bị từ chối</td></tr>
+        <tr><td>Ảnh và video<br><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_EXTERNAL_STORAGE</code> (Android 12 và thấp hơn)</td><td>Đọc ảnh và video của bạn cho thư viện trong ứng dụng, dòng thời gian chia sẻ và chức năng ghép ảnh.</td><td>Thư viện, ghép ảnh, chia sẻ</td></tr>
+        <tr><td>Ghi vào bộ nhớ<br><code>WRITE_EXTERNAL_STORAGE</code> (chỉ Android 9 và thấp hơn)</td><td>Lưu ảnh và video vào thư viện trên các phiên bản Android cũ.</td><td>Lưu tệp trên Android cũ</td></tr>
+        <tr><td>Vị trí của tệp media<br><code>ACCESS_MEDIA_LOCATION</code></td><td>Được khai báo trong manifest; phiên bản hiện tại không sử dụng.</td><td>Không</td></tr>
+        <tr><td>Mạng<br><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td><td>Tra cứu độ cao và thời tiết; quảng cáo; đăng nhập Google; xác minh giao dịch mua; phân tích và báo cáo sự cố.</td><td>Một số tính năng</td></tr>
+        <tr><td>ID quảng cáo<br><code>AD_ID</code></td><td>Được các SDK quảng cáo và phân tích sử dụng để phân phối quảng cáo, đo lường và phân tích.</td><td>Kiểm soát trong cài đặt hệ thống</td></tr>
+        <tr><td>Rung<br><code>VIBRATE</code></td><td>Phản hồi rung khi bạn tương tác.</td><td>Không</td></tr>
+      </table>
+    </div>
+    <p>Chúng tôi chỉ xin quyền khi bạn sử dụng tính năng liên quan. Bạn có thể thu hồi quyền bất cứ lúc nào tại Cài đặt &gt; Ứng dụng &gt; TimeStamp Camera &gt; Quyền. Tính năng liên quan sẽ ngừng hoạt động; các tính năng khác không bị ảnh hưởng.</p>
+
+    <h2>2. Cách từng tính năng xử lý thông tin của bạn</h2>
+    <h3>2.1 Ảnh và video</h3>
+    <p>Ảnh và video được lưu vào thư viện trên thiết bị của bạn thông qua kho media của hệ thống (một album của Ứng dụng nằm trong Pictures và Movies). Các tệp trong thư viện hệ thống có thể được những ứng dụng khác mà bạn đã cấp quyền truy cập thư viện đọc được. Ứng dụng không bao giờ tải ảnh hay video lên cho chúng tôi hoặc bất kỳ máy chủ của bên thứ ba nào. Khi xem trước, Ứng dụng ghi một ảnh tạm thời vào thư mục bộ nhớ đệm của Ứng dụng.</p>
+
+    <h3>2.2 Vị trí, độ cao và thời tiết</h3>
+    <ul>
+      <li>Ứng dụng chỉ đọc vị trí đã biết gần nhất của thiết bị khi đang ở màn hình máy ảnh và không bao giờ theo dõi vị trí ở nền sau.</li>
+      <li>Địa chỉ được phân giải bởi bộ giải mã địa lý của hệ thống Android (<code>Geocoder</code>), có thể do nhà sản xuất thiết bị hoặc Google cung cấp.</li>
+      <li><strong>Độ cao:</strong> khi dữ liệu định vị không kèm độ cao, Ứng dụng gửi <strong>toạ độ chính xác (6 chữ số thập phân)</strong> tới dịch vụ Open-Elevation và lưu tạm kết quả trong bộ nhớ trong 10 phút.</li>
+      <li><strong>Thời tiết:</strong> chỉ khi thiết lập thời tiết được bật và hình chìm hiện tại có trường thời tiết, Ứng dụng mới gửi toạ độ <strong>đã làm tròn tới 2 chữ số thập phân (khoảng 1 km)</strong> tới dịch vụ thời tiết Open-Meteo và lưu tạm kết quả trong 15 phút.</li>
+      <li>Vị trí chỉ được dùng để hiển thị và in vào hình chìm. Vị trí không được lưu riêng hay tải lên bất kỳ máy chủ nào của chúng tôi. Xin lưu ý rằng <strong>vị trí trong hình chìm sẽ được bất kỳ ai bạn chia sẻ ảnh hoặc video cùng đều nhìn thấy</strong>.</li>
+    </ul>
+    <h3>2.3 Nội dung hình chìm và thông tin thiết bị</h3>
+    <p>Hình chìm có thể chứa văn bản tuỳ chỉnh do bạn nhập (như tên, tổ chức hoặc ghi chú), một ảnh logo bạn chọn từ thư viện, cùng mẫu thiết bị và nhà sản xuất thiết bị. Những thông tin này chỉ được dùng ngay trên thiết bị để vẽ hình chìm và được lưu cùng ảnh hoặc video của bạn.</p>
+
+    <h3>2.4 Chỉnh sửa, ghép ảnh và chia sẻ</h3>
+    <ul>
+      <li>Việc chỉnh sửa ảnh, ghép ảnh và xuất PDF đều được thực hiện ngay trên thiết bị.</li>
+      <li>Chức năng ghép ảnh đọc thời điểm chụp trong dữ liệu EXIF của ảnh để sắp xếp và hiển thị. Tối đa 30 bản nháp ghép ảnh gần nhất được lưu trên thiết bị.</li>
+      <li>Khi bạn chia sẻ một mẫu hình chìm, Ứng dụng tạo ngay trên thiết bị một áp phích gồm kiểu hình chìm, tên và tổ chức bạn đã nhập, cùng một mã QR dẫn tới trang Google Play của Ứng dụng.</li>
+      <li>Mọi hoạt động chia sẻ đều đi qua bảng chia sẻ của hệ thống. Bạn là người quyết định ai nhận được nội dung đó.</li>
+    </ul>
+
+    <h3>2.5 Đăng nhập Google (tuỳ chọn)</h3>
+    <p>Không cần đăng nhập để sử dụng Ứng dụng; việc đăng nhập chỉ cần thiết khi bạn muốn mua hoặc khôi phục Premium. Sau khi đăng nhập, Ứng dụng nhận được ID người dùng của tài khoản Google, tên hiển thị, email, số điện thoại (nếu được liên kết với tài khoản) và URL ảnh đại diện của bạn thông qua Firebase Authentication. Ứng dụng chỉ dùng những thông tin này để xác định người mua và không gửi chúng tới bất kỳ máy chủ nào của chúng tôi. Bạn có thể đăng xuất bất cứ lúc nào.</p>
+
+    <h3>2.6 Giao dịch mua</h3>
+    <p>Giao dịch mua do Google Play Billing xử lý; chúng tôi không bao giờ nhận được thông tin thẻ hay tài khoản thanh toán của bạn. Trạng thái Premium được lưu trên thiết bị ở dạng đã mã hoá.</p>
+
+    <h3>2.7 Thiết lập trên thiết bị</h3>
+    <p>Kiểu hình chìm, trạng thái bật/tắt từng trường, tỉ lệ khung hình, chất lượng, ngôn ngữ và các thiết lập khác được lưu trên thiết bị. Ứng dụng cho phép sao lưu Android, nên nếu bạn bật sao lưu hệ thống, những thiết lập này và các bản nháp ghép ảnh có thể được sao lưu vào tài khoản Google của bạn (ảnh và video không nằm trong phạm vi sao lưu của Ứng dụng).</p>
+
+    <h2>3. Dịch vụ của bên thứ ba</h2>
+    <p>Ứng dụng tích hợp các dịch vụ sau. Những dịch vụ này xử lý thông tin một cách độc lập theo chính sách quyền riêng tư của riêng họ. Chúng tôi khuyến nghị bạn đọc các chính sách đó. Ứng dụng không khởi tạo quảng cáo trước khi bạn chấp nhận chính sách này.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Dịch vụ</th><th>Nhà cung cấp</th><th>Mục đích</th><th>Thông tin có thể được xử lý</th></tr>
+        <tr><td>Google AdMob</td><td>Google LLC</td><td>Quảng cáo khi mở ứng dụng lúc khởi động</td><td>ID quảng cáo, mẫu thiết bị và phiên bản hệ điều hành, địa chỉ IP, tương tác với quảng cáo</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google LLC</td><td>Thống kê sử dụng ẩn danh</td><td>ID phiên bản ứng dụng, ID quảng cáo, thông tin thiết bị, các sự kiện sử dụng ứng dụng</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Báo cáo sự cố</td><td>Bản ghi sự cố, mẫu thiết bị, phiên bản hệ điều hành, phiên bản ứng dụng</td></tr>
+        <tr><td>Firebase Authentication / Google Sign-In</td><td>Google LLC</td><td>Đăng nhập tài khoản</td><td>ID tài khoản Google, tên, email, số điện thoại, ảnh đại diện</td></tr>
+        <tr><td>Google Play Billing</td><td>Google LLC</td><td>Mua hàng trong ứng dụng</td><td>Lịch sử mua, thông tin đơn hàng</td></tr>
+        <tr><td>Open-Elevation</td><td>open-elevation.com</td><td>Tra cứu độ cao</td><td>Toạ độ chính xác, địa chỉ IP</td></tr>
+        <tr><td>Open-Meteo</td><td>Open-Meteo.com</td><td>Tra cứu thời tiết</td><td>Toạ độ ở độ chính xác khoảng 1 km, địa chỉ IP</td></tr>
+        <tr><td>Bộ giải mã địa lý của hệ thống</td><td>Nhà sản xuất thiết bị hoặc Google</td><td>Chuyển toạ độ thành địa chỉ</td><td>Toạ độ</td></tr>
+      </table>
+    </div>
+    <p>Các chính sách: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Chính sách quyền riêng tư của Google</a> · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Cách Google sử dụng thông tin từ các ứng dụng đối tác</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Quyền riêng tư và bảo mật của Firebase</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Điều khoản của Open-Meteo</a> · <a href="https://open-elevation.com/" target="_blank" rel="noopener">Open-Elevation</a></p>
+    <h2>4. Chia sẻ, chuyển giao và công bố</h2>
+    <ul>
+      <li>Chúng tôi không bán thông tin cá nhân của bạn.</li>
+      <li>Ngoài các dịch vụ nêu ở mục 3, chúng tôi không chia sẻ thông tin của bạn với bất kỳ bên thứ ba nào.</li>
+      <li>Ảnh, video và các bản ghép ảnh chỉ rời khỏi thiết bị của bạn khi chính bạn chia sẻ chúng.</li>
+      <li>Chúng tôi sẽ phối hợp với các yêu cầu hợp pháp của cơ quan có thẩm quyền theo quy định của pháp luật, nhưng chúng tôi không lưu giữ ảnh, video hay dữ liệu vị trí của bạn.</li>
+    </ul>
+
+    <h2>5. Lưu trữ và xoá dữ liệu</h2>
+    <ul>
+      <li>Ảnh và video được giữ trong thư viện của hệ thống. Việc gỡ cài đặt Ứng dụng không xoá chúng; bạn có thể tự xoá chúng trong thư viện.</li>
+      <li>Thiết lập, bản nháp ghép ảnh và trạng thái mua được lưu trong dữ liệu của Ứng dụng và bị xoá khi bạn xoá dữ liệu của Ứng dụng hoặc gỡ cài đặt Ứng dụng.</li>
+      <li>Kết quả độ cao và thời tiết chỉ được lưu tạm trong bộ nhớ một thời gian ngắn và bị xoá khi Ứng dụng đóng lại.</li>
+      <li>Thông tin do các dịch vụ của bên thứ ba thu thập được lưu giữ theo chính sách của riêng họ.</li>
+    </ul>
+
+    <h2>6. Quyền của bạn</h2>
+    <ul>
+      <li><strong>Quản lý quyền:</strong> bật hoặc tắt quyền truy cập máy ảnh, micrô, vị trí và thư viện trong cài đặt hệ thống bất cứ lúc nào.</li>
+      <li><strong>Kiểm soát nội dung hình chìm:</strong> ẩn địa chỉ, toạ độ, độ cao, thời tiết, mẫu thiết bị hoặc bất kỳ trường nào khác trong trình chỉnh sửa hình chìm. Tắt thời tiết sẽ dừng các yêu cầu tra cứu thời tiết.</li>
+      <li><strong>Xoá dữ liệu:</strong> xoá ảnh và video trong thư viện, xoá dữ liệu của Ứng dụng trong cài đặt hệ thống, hoặc gỡ cài đặt Ứng dụng.</li>
+      <li><strong>Đăng xuất:</strong> đăng xuất khỏi tài khoản Google của bạn trong Ứng dụng.</li>
+      <li><strong>Quản lý quảng cáo:</strong> đặt lại hoặc xoá ID quảng cáo và từ chối quảng cáo được cá nhân hoá tại Cài đặt Android &gt; Quyền riêng tư &gt; Quảng cáo.</li>
+      <li><strong>Thắc mắc và khiếu nại:</strong> liên hệ với chúng tôi qua email ở mục 10.</li>
+    </ul>
+
+    <h2>7. Bảo mật</h2>
+    <p>Việc trao đổi dữ liệu với các dịch vụ độ cao, thời tiết và các SDK của bên thứ ba đều dùng HTTPS. Trạng thái mua được lưu bằng bộ lưu trữ mã hoá của Android. Vui lòng giữ an toàn cho thiết bị và thư viện ảnh của bạn.</p>
+
+    <h2>8. Trẻ em</h2>
+    <p>Ứng dụng không hướng tới trẻ em dưới 14 tuổi. Người chưa thành niên nên sử dụng Ứng dụng khi có sự đồng ý và hướng dẫn của cha mẹ hoặc người giám hộ. Nếu người giám hộ cho rằng một người chưa thành niên đã cung cấp thông tin cá nhân cho chúng tôi mà không có sự đồng ý, vui lòng liên hệ với chúng tôi.</p>
+
+    <h2>9. Thay đổi chính sách này</h2>
+    <p>Chúng tôi có thể cập nhật chính sách này khi các tính năng thay đổi hoặc khi pháp luật yêu cầu. Bản cập nhật sẽ được đăng trên trang này cùng ngày mới. Với những thay đổi quan trọng ảnh hưởng tới quyền của bạn, chúng tôi sẽ thông báo trong Ứng dụng, ví dụ bằng một hộp thoại.</p>
+
+    <h2>10. Liên hệ với chúng tôi</h2>
+    <p>Nếu bạn có bất kỳ câu hỏi, ý kiến hoặc yêu cầu nào liên quan đến chính sách này hoặc thông tin cá nhân của bạn, hãy gửi email tới: <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

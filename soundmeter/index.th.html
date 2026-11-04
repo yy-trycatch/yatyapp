@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decibel Meter (SoundMeter) - yatyapp</title>
+  <meta name="description" content="Decibel Meter: วัดเสียงรบกวนแบบเรียลไทม์ กล้องวัดเดซิเบล บันทึกประวัติ และส่งออกเป็นไฟล์ Excel">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.th.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="เมนู">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>ผลิตภัณฑ์</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.th.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>ความเป็นส่วนตัว</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.th.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>ข้อกำหนด</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.th.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.th.html#contact">ติดต่อ</a></li>
+        <li class="lang">
+          <button>ไทย</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>Decibel Meter<br><em>SoundMeter</em></h1>
+    <p class="lead">เครื่องวัดระดับเสียง (เครื่องวัดเสียง) ในกระเป๋าของคุณ วัดเสียงรบกวนรอบตัวแบบเรียลไทม์ บันทึกวิดีโอพร้อมซ้อนข้อมูลค่าเดซิเบล แล้วเปิดดูซ้ำ แชร์ หรือส่งออกทุกบันทึกเป็นไฟล์ Excel</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.th.html">นโยบายความเป็นส่วนตัว</a>
+    <a class="btn ghost" href="terms.th.html">ข้อกำหนดการใช้งาน</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>อัตราสุ่มสัญญาณ</span></div>
+      <div class="stat"><b>A / C</b><span>การถ่วงน้ำหนักความถี่</span></div>
+      <div class="stat"><b>6</b><span>ภาษาในแอป</span></div>
+      <div class="stat"><b>0</b><span>เซิร์ฟเวอร์ข้อมูลของเราเอง</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">ฟีเจอร์</h2>
+      <p class="section-sub">// ความสามารถหลัก</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>สุ่มสัญญาณที่ 44.1kHz พร้อมการวิเคราะห์ย่านความถี่ด้วยอัลกอริทึม Goertzel และการถ่วงน้ำหนักแบบ A / C หน้าปัดแสดงค่าเดซิเบลปัจจุบัน ค่าเฉลี่ย ค่าสูงสุด และค่าต่ำสุด พร้อมเส้นแนวโน้มแบบเรียลไทม์</p></div>
+        <div class="feature"><h4>db_camera</h4><p>ฝังสถิติค่าเดซิเบล เวลา ที่อยู่ พิกัด และสภาพอากาศลงในวิดีโอขณะบันทึก รองรับกล้องหน้า กล้องหลัง และแฟลช</p></div>
+        <div class="feature"><h4>history</h4><p>ทุกการวัดจะถูกบันทึกไว้โดยอัตโนมัติ หน้ารายละเอียดแสดงกราฟเส้นค่าเดซิเบล แตะจุดใดก็ได้เพื่อข้ามไปยังช่วงเวลานั้นในวิดีโอ</p></div>
+        <div class="feature"><h4>export</h4><p>รวมไฟล์ Excel (สรุปผลและข้อมูลรายจุด) วิดีโอ และไฟล์เสียงไว้เป็นชุดเดียว แล้วส่งผ่านเมนูแชร์ของระบบ</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>บันทึกเมื่อตรวจพบเสียง: เมื่อระดับเสียงถึงเกณฑ์ที่คุณกำหนด (ค่าเริ่มต้น 70dB ปรับได้ในช่วง 40-140dB) ระบบจะเริ่มบันทึกนาน 3 นาทีโดยอัตโนมัติ</p></div>
+        <div class="feature"><h4>i18n</h4><p>จีนตัวย่อ จีนตัวเต็ม อังกฤษ ญี่ปุ่น เกาหลี และเวียดนาม</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">ภาพหน้าจอ</h2>
+      <p class="section-sub">// ถ่ายจากเครื่องจริง</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="หน้าจอเริ่มต้น" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>เปิดแล้ววัดได้ทันที</h3>
+            <p>เมื่อเปิดแอปครั้งแรกจะแสดงประกาศเกี่ยวกับความเป็นส่วนตัว หลังจากคุณยอมรับ ระบบจะพาเข้าสู่หน้าเครื่องวัดโดยตรง ไม่ต้องมีบัญชี</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="ตรวจวัดเสียงรบกวน" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>ตรวจวัดเสียงรบกวนแบบเรียลไทม์</h3>
+            <p>หน้าปัดแสดงระดับเสียงปัจจุบัน ด้านล่างแสดงค่าเฉลี่ย ค่าสูงสุด ค่าต่ำสุด และกราฟเส้นแบบเรียลไทม์</p>
+            <ul>
+              <li>การถ่วงน้ำหนักแบบ A: ใกล้เคียงกับการได้ยินของมนุษย์</li>
+              <li>การถ่วงน้ำหนักแบบ C: คงความถี่ต่ำไว้มากกว่า</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="กล้องวัดเดซิเบล" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>กล้องวัดเดซิเบล</h3>
+            <p>วัดเสียงไปพร้อมกับการถ่ายวิดีโอ ค่าเดซิเบล ระยะเวลา เวลา สถานที่ และสภาพอากาศจะถูกฝังลงในวิดีโอ ทำให้เห็นหลักฐานได้ทั้งเมื่อเปิดดูซ้ำและเมื่อแชร์</p>
+            <ul>
+              <li>ตำแหน่งที่ตั้งเป็นทางเลือก ไม่ให้สิทธิ์ก็ยังบันทึกวิดีโอได้</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="รายการประวัติ" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>ประวัติการวัด</h3>
+            <p>แสดงบันทึกทั้งหมดเรียงตามเวลา พร้อมระยะเวลาและค่าเดซิเบลสูงสุด / เฉลี่ย / ต่ำสุด ข้อมูลจัดเก็บอยู่บนเครื่องของคุณ</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="รายละเอียดบันทึก" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>กราฟเชื่อมโยงกับวิดีโอ</h3>
+            <p>หน้ารายละเอียดแสดงกราฟค่าเดซิเบลทั้งหมดพร้อมการเล่นวิดีโอ แตะตำแหน่งใดบนกราฟก็ได้เพื่อเลื่อนวิดีโอไปยังช่วงเวลานั้น</p>
+            <ul>
+              <li>แชร์ไฟล์ Excel + วิดีโอ + เสียง รวมเป็นชุดเดียว</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="หน้าของฉัน" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>ของฉัน</h3>
+            <p>ลงชื่อเข้าใช้ Google ศูนย์สมาชิก โฆษณาแบบมีรางวัลเพื่อรับโควตาบันทึกเพิ่ม เกณฑ์เสียงสำหรับการบันทึกอัตโนมัติ รวมถึงนโยบายความเป็นส่วนตัวและข้อกำหนด</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.th.html">นโยบายความเป็นส่วนตัว</a> · <a href="terms.th.html">ข้อกำหนดการใช้งาน</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

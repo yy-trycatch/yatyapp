@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeStamp Camera - yatyapp</title>
+  <meta name="description" content="TimeStamp Camera: 시간, 위치, 날씨, 고도 워터마크, 동영상 워터마크, 사진 편집기, 일일 보고 콜라주.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.ko.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="메뉴">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>제품</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.ko.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>개인정보</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.ko.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>이용약관</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.ko.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.ko.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.ko.html#contact">문의</a></li>
+        <li class="lang">
+          <button>한국어</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./timestamp</span>
+    <h1>TimeStamp<br><em>Camera</em></h1>
+    <p class="lead">TimeStamp Camera(타임스탬프 카메라)는 모든 사진과 동영상에 시간, 주소, 좌표, 날씨, 고도를 새겨 넣습니다. 출퇴근 체크, 점검, 현장 기록, 업무 보고를 위해 만들었습니다. 촬영물은 이용자의 갤러리에 그대로 남습니다.</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.ko.html">개인정보 처리방침</a>
+    <a class="btn ghost" href="terms.ko.html">이용약관</a>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>워터마크 분류</span></div>
+      <div class="stat"><b>9</b><span>콜라주당 사진 수</span></div>
+      <div class="stat"><b>IMG / PDF</b><span>콜라주 내보내기</span></div>
+      <div class="stat"><b>0</b><span>촬영물 업로드</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">주요 기능</h2>
+      <p class="section-sub">// 핵심 기능</p>
+      <div class="features">
+        <div class="feature"><h4>watermark</h4><p>시간, 날짜, 주소, 좌표, 고도, 날씨, 기기 모델, 사용자 지정 문구와 로고를 지원합니다. 모든 항목을 수정하거나 숨길 수 있습니다.</p></div>
+        <div class="feature"><h4>templates</h4><p>일반, 일상, 업무 보고, 점검, 근태 스타일을 제공합니다. 한 번의 탭으로 전환할 수 있습니다.</p></div>
+        <div class="feature"><h4>video_overlay</h4><p>녹화하는 동안 워터마크가 동영상에 합성되며, 시계도 함께 계속 움직입니다.</p></div>
+        <div class="feature"><h4>camera</h4><p>전면·후면 카메라, 줌, 플래시, 밝기, 타이머, 3:4 / 9:16 / 1:1 화면비, 절약 / 표준 / 고화질 품질을 지원합니다.</p></div>
+        <div class="feature"><h4>collage</h4><p>일일 보고, 업무 보고, 작업 기록, 시공 일지 템플릿을 제공합니다. 사진은 최대 9장까지, 이미지 또는 PDF로 내보낼 수 있습니다.</p></div>
+        <div class="feature"><h4>editor</h4><p>자르기, 회전, 밝기, 대비, 채도 조절과 함께 흑백, 세피아, 선명, 쿨, 웜, 페이드 필터를 제공합니다.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">스크린샷</h2>
+      <p class="section-sub">// 실제 기기에서 촬영</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/camera_play.png" alt="워터마크 사진" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / camera</span>
+            <h3>워터마크 사진</h3>
+            <p>뷰파인더에서 워터마크를 실시간으로 확인할 수 있습니다. 시간, 날짜, 장소, 좌표, 날씨, 고도, 기기 모델이 자동으로 채워집니다.</p>
+            <ul>
+              <li>위치 정보는 필요할 때만 읽고, 백그라운드에서는 추적하지 않습니다</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="동영상 모드" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / video</span>
+            <h3>워터마크 동영상</h3>
+            <p>동영상 모드로 전환하면 같은 워터마크 스타일이 촬영물에 적용되며, 야간에도 또렷하게 읽힙니다.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/videorecord_play.png" alt="녹화 중" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / recording</span>
+            <h3>녹화하면서 바로 합성</h3>
+            <p>녹화하는 동안 워터마크가 모든 프레임에 기록됩니다. 별도의 후처리가 필요하지 않습니다.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/picedit_play.png" alt="사진 편집기" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / editor</span>
+            <h3>사진 편집기</h3>
+            <p>촬영한 사진을 자르고 회전하고 색상을 조정하고 필터를 적용한 뒤 갤러리에 다시 저장할 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/wordpage_play.png" alt="일일 보고 콜라주" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / collage</span>
+            <h3>일일 보고 콜라주</h3>
+            <p>템플릿을 고르고 오늘 한 일과 내일 계획을 적고 현장 사진을 최대 9장까지 추가하면 보고용 이미지나 PDF를 만들 수 있습니다.</p>
+            <ul>
+              <li>템플릿, 레이아웃, 머리글을 자유롭게 조합</li>
+              <li>임시 저장 내용은 기기에 보관</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.ko.html">개인정보 처리방침</a> · <a href="terms.ko.html">이용약관</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

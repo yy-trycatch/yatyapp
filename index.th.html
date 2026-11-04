@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yatyapp - แอปเครื่องมือขนาดเล็กที่มุ่งเน้นเฉพาะทาง</title>
+  <meta name="description" content="แอปเครื่องมือจาก yatyapp: Decibel Meter (SoundMeter) และ TimeStamp Camera">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.th.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="เมนู">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>ผลิตภัณฑ์</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/index.th.html">SoundMeter</a></li>
+            <li><a href="timestamp/index.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>ความเป็นส่วนตัว</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/privacy.th.html">SoundMeter</a></li>
+            <li><a href="timestamp/privacy.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>ข้อกำหนด</button>
+          <ul class="submenu">
+            <li><a href="soundmeter/terms.th.html">SoundMeter</a></li>
+            <li><a href="timestamp/terms.th.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="index.th.html#contact">ติดต่อ</a></li>
+        <li class="lang">
+          <button>ไทย</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <h1>Build small tools,<br><em>ship them well.</em></h1>
+    <p class="lead">yatyapp คือบ้านของแอปที่พัฒนาโดยนักพัฒนาเพียงคนเดียว เราสร้างเฉพาะเครื่องมือขนาดเล็กที่แก้ปัญหาอย่างเป็นรูปธรรมเพียงเรื่องเดียว คือเปิดแล้วใช้งานได้ทันที ข้อมูลอยู่บนเครื่องของคุณ และไม่ต้องสมัครสมาชิก</p>
+    <a class="btn" href="#products">./list-products</a>
+    <a class="btn ghost" href="#contact">mailto --dev</a>
+
+    <div class="terminal" style="margin-top: 40px;">
+      <div class="terminal-bar">
+        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+        <span class="title">yatyapp@home: ~/apps</span>
+      </div>
+      <div class="terminal-body"><span class="p">$</span> ls -l ~/apps
+<span class="c">drwxr-xr-x  android  </span><span class="k">soundmeter/</span>   <span class="c"># Decibel Meter: ระดับเสียงแบบเรียลไทม์ + กล้องวัดเดซิเบล</span>
+<span class="c">drwxr-xr-x  android  </span><span class="k">timestamp/</span>    <span class="c"># TimeStamp Camera: ลายน้ำเวลาและสถานที่ + คอลลาจรายงานงาน</span>
+
+<span class="p">$</span> cat ~/apps/*/manifest | grep -E "server|account"
+<span class="k">own_server</span>   = <span class="v">none</span>      <span class="c"># ไม่มีเซิร์ฟเวอร์ที่เก็บรวบรวมข้อมูลผู้ใช้</span>
+<span class="k">account</span>      = <span class="v">optional</span>  <span class="c"># ลงชื่อเข้าใช้ Google เพื่อซื้อหรือกู้คืน Premium เท่านั้น</span>
+<span class="k">storage</span>      = <span class="v">local</span>     <span class="c"># รูปภาพ วิดีโอ และบันทึกอยู่บนเครื่องเท่านั้น</span>
+
+<span class="p">$</span> <span class="cursor-block"></span></div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">ผลิตภัณฑ์</h2>
+      <p class="section-sub">// แอป Android 2 ตัวที่ดูแลและอัปเดตอย่างต่อเนื่อง</p>
+
+      <div class="grid">
+        <article class="card product-card">
+          <img src="soundmeter/image/home_play.png" alt="หน้าจอหลักของ Decibel Meter">
+          <div>
+            <span class="tag">[soundmeter] v1.0.6 · Android 8.0+</span>
+            <h3>Decibel Meter</h3>
+            <p>เปลี่ยนโทรศัพท์ของคุณให้เป็นเครื่องวัดระดับเสียง วัดเสียงรบกวนรอบตัวแบบเรียลไทม์ บันทึกวิดีโอพร้อมค่าเดซิเบลซ้อนทับแบบสด เปิดดูซ้ำได้ทุกบันทึก และส่งออกเป็นไฟล์ Excel</p>
+            <ul>
+              <li>สุ่มสัญญาณที่ 44.1kHz พร้อมการถ่วงน้ำหนักความถี่แบบ A / C</li>
+              <li>กล้องวัดเดซิเบล: แสดงค่าเดซิเบล เวลา และสถานที่บนวิดีโอ</li>
+              <li>แตะกราฟประวัติเพื่อข้ามไปยังช่วงเวลานั้นในวิดีโอ</li>
+              <li>บันทึกอัตโนมัติเมื่อตรวจพบเสียง รองรับภาษาในแอป 6 ภาษา</li>
+            </ul>
+            <div class="links">
+              <a href="soundmeter/index.th.html">รายละเอียด -&gt;</a>
+              <a href="soundmeter/privacy.th.html">ความเป็นส่วนตัว</a>
+              <a href="soundmeter/terms.th.html">ข้อกำหนด</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product-card">
+          <img src="timestamp/image/camera_play.png" alt="หน้าจอถ่ายภาพของ TimeStamp Camera">
+          <div>
+            <span class="tag">[timestamp] v1.0 · Android 7.0+</span>
+            <h3>TimeStamp Camera</h3>
+            <p>ประทับเวลา ตำแหน่ง สภาพอากาศ และระดับความสูงลงบนรูปภาพและวิดีโอขณะถ่าย ออกแบบมาเพื่อการเช็กอิน การตรวจงาน บันทึกหน้างาน และรายงานการทำงาน</p>
+            <ul>
+              <li>เทมเพลตทั่วไป / ชีวิตประจำวัน / รายงานงาน / ตรวจงาน / ลงเวลาทำงาน</li>
+              <li>ฝังลายน้ำลงในวิดีโอแบบเรียลไทม์</li>
+              <li>คอลลาจรายงานประจำวัน ส่งออกเป็นรูปภาพหรือ PDF</li>
+              <li>เครื่องมือแก้ไขในตัว: ครอป หมุน และฟิลเตอร์</li>
+            </ul>
+            <div class="links">
+              <a href="timestamp/index.th.html">รายละเอียด -&gt;</a>
+              <a href="timestamp/privacy.th.html">ความเป็นส่วนตัว</a>
+              <a href="timestamp/terms.th.html">ข้อกำหนด</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">หลักการ</h2>
+      <p class="section-sub">// กฎที่ฝังอยู่ในทุกแอป</p>
+      <div class="features">
+        <div class="feature"><h4>local_first()</h4><p>โดยค่าเริ่มต้น รูปภาพ วิดีโอ และผลการวัดจะถูกจัดเก็บไว้บนเครื่องของคุณเท่านั้น เราไม่มีเซิร์ฟเวอร์เบื้องหลังที่เก็บรวบรวมข้อมูลผู้ใช้</p></div>
+        <div class="feature"><h4>least_privilege()</h4><p>เราขอสิทธิ์การเข้าถึงเฉพาะเมื่อฟีเจอร์นั้นจำเป็นต้องใช้ หากคุณปฏิเสธสิทธิ์ที่เป็นทางเลือก เช่น ตำแหน่งที่ตั้ง ฟีเจอร์หลักก็ยังทำงานได้ตามปกติ</p></div>
+        <div class="feature"><h4>no_signup()</h4><p>ใช้งานแอปได้โดยไม่ต้องมีบัญชี การลงชื่อเข้าใช้ Google จำเป็นเฉพาะเมื่อต้องการซื้อหรือกู้คืน Premium เท่านั้น</p></div>
+        <div class="feature"><h4>transparent()</h4><p>นโยบายความเป็นส่วนตัวของเราระบุสิทธิ์การเข้าถึง SDK ของบุคคลที่สาม และการไหลของข้อมูล ตรงตามที่โค้ดทำงานจริง</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="terminal contact-box">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span class="title">contact.sh</span>
+        </div>
+        <div class="terminal-body" style="text-align: center; white-space: normal;">
+          <h2 class="section-title" style="margin-bottom: 18px;">ติดต่อเรา</h2>
+          <a class="mail" href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+          <p>แจ้งข้อบกพร่อง เสนอแนวคิดฟีเจอร์ สอบถามเรื่องความเป็นส่วนตัว หรือร่วมเป็นพาร์ตเนอร์: ส่งอีเมลถึงนักพัฒนาได้เลย</p>
+          <a class="btn" href="mailto:zhangjunfeng020@gmail.com">$ send --mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · สร้างด้วย &lt;/&gt; และกาแฟ
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

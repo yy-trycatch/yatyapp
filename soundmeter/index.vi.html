@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máy đo decibel (Decibel Meter / SoundMeter) - yatyapp</title>
+  <meta name="description" content="Máy đo decibel: đo tiếng ồn theo thời gian thực, camera dB, lịch sử bản ghi và xuất Excel.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.vi.html">~/yatyapp<span>$</span><b class="cursor">_</b></a>
+      <button class="nav-toggle" aria-label="Menu">[menu]</button>
+      <ul class="menu">
+        <li>
+          <button>Sản phẩm</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/index.vi.html">SoundMeter</a></li>
+            <li><a href="../timestamp/index.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Quyền riêng tư</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/privacy.vi.html">SoundMeter</a></li>
+            <li><a href="../timestamp/privacy.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li>
+          <button>Điều khoản</button>
+          <ul class="submenu">
+            <li><a href="../soundmeter/terms.vi.html">SoundMeter</a></li>
+            <li><a href="../timestamp/terms.vi.html">TimeStamp</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.vi.html#contact">Liên hệ</a></li>
+        <li class="lang">
+          <button>Tiếng Việt</button>
+          <ul class="submenu">
+            <li><a href="index.html" data-lang="zh-CN" lang="zh-CN">简体中文</a></li>
+            <li><a href="index.zh-TW.html" data-lang="zh-TW" lang="zh-TW">繁體中文</a></li>
+            <li><a href="index.en.html" data-lang="en" lang="en">English</a></li>
+            <li><a href="index.ja.html" data-lang="ja" lang="ja">日本語</a></li>
+            <li><a href="index.ko.html" data-lang="ko" lang="ko">한국어</a></li>
+            <li><a href="index.vi.html" data-lang="vi" lang="vi">Tiếng Việt</a></li>
+            <li><a href="index.th.html" data-lang="th" lang="th">ไทย</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <span class="tag mono" style="color: var(--green);">$ open ./soundmeter</span>
+    <h1>Máy đo decibel<br><em>SoundMeter</em></h1>
+    <p class="lead">Một máy đo mức âm thanh gọn trong túi bạn. Đo tiếng ồn môi trường theo thời gian thực, quay video có dữ liệu dB hiển thị trên hình, sau đó xem lại, chia sẻ hoặc xuất từng bản ghi ra Excel.</p>
+    <a class="btn" href="#shots">./screenshots</a>
+    <a class="btn ghost" href="privacy.vi.html">Chính sách quyền riêng tư</a>
+    <a class="btn ghost" href="terms.vi.html">Điều khoản sử dụng</a>
+    <div class="stats">
+      <div class="stat"><b>44.1kHz</b><span>tần số lấy mẫu</span></div>
+      <div class="stat"><b>A / C</b><span>trọng số tần số</span></div>
+      <div class="stat"><b>6</b><span>ngôn ngữ giao diện</span></div>
+      <div class="stat"><b>0</b><span>máy chủ dữ liệu của riêng chúng tôi</span></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Tính năng</h2>
+      <p class="section-sub">// các năng lực cốt lõi</p>
+      <div class="features">
+        <div class="feature"><h4>realtime_db</h4><p>Lấy mẫu ở 44.1kHz với phân tích dải tần Goertzel và trọng số A / C. Đồng hồ đo hiển thị dB hiện tại, trung bình, lớn nhất và nhỏ nhất cùng đường xu hướng theo thời gian thực.</p></div>
+        <div class="feature"><h4>db_camera</h4><p>Ghi thẳng các số liệu dB, thời gian, địa chỉ, toạ độ và thời tiết vào video trong lúc quay. Hỗ trợ camera trước/sau và đèn flash.</p></div>
+        <div class="feature"><h4>history</h4><p>Mỗi lần đo đều được lưu tự động. Trang chi tiết vẽ đường cong dB; chạm vào bất kỳ điểm nào để nhảy tới thời điểm đó trong video.</p></div>
+        <div class="feature"><h4>export</h4><p>Đóng gói một bảng tính Excel (tổng quan + dữ liệu từng điểm), video và âm thanh, rồi gửi đi qua bảng chia sẻ của hệ thống.</p></div>
+        <div class="feature"><h4>voice_trigger</h4><p>Ghi theo ngưỡng âm thanh: khi mức âm thanh đạt tới ngưỡng bạn đặt (mặc định 70dB, có thể điều chỉnh trong khoảng 40-140dB), ứng dụng tự động ghi trong 3 phút.</p></div>
+        <div class="feature"><h4>i18n</h4><p>Tiếng Trung giản thể, tiếng Trung phồn thể, tiếng Anh, tiếng Nhật, tiếng Hàn và tiếng Việt.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shots">
+    <div class="container">
+      <h2 class="section-title">Ảnh chụp màn hình</h2>
+      <p class="section-sub">// chụp trên thiết bị thật</p>
+      <div class="shots">
+        <div class="shot">
+          <figure><img src="image/splash_play.png" alt="Màn hình chào" loading="lazy"></figure>
+          <div>
+            <span class="idx">01 / splash</span>
+            <h3>Mở là đo được</h3>
+            <p>Lần mở đầu tiên sẽ hiển thị thông báo về quyền riêng tư. Sau khi bạn đồng ý, ứng dụng vào thẳng màn hình đo. Không cần tài khoản.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/home_play.png" alt="Kiểm tra tiếng ồn" loading="lazy"></figure>
+          <div>
+            <span class="idx">02 / noise_check</span>
+            <h3>Kiểm tra tiếng ồn trực tiếp</h3>
+            <p>Đồng hồ đo hiển thị mức âm thanh hiện tại, bên dưới là giá trị trung bình, lớn nhất, nhỏ nhất và đường cong theo thời gian thực.</p>
+            <ul>
+              <li>Trọng số A: gần với cảm nhận của tai người</li>
+              <li>Trọng số C: giữ lại nhiều tần số thấp hơn</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/video_play.png" alt="Camera dB" loading="lazy"></figure>
+          <div>
+            <span class="idx">03 / db_camera</span>
+            <h3>Camera dB</h3>
+            <p>Vừa quay vừa đo. Giá trị dB, thời lượng, thời gian, địa điểm và thời tiết được ghi thẳng vào video, nên bằng chứng vẫn hiển thị khi xem lại và khi chia sẻ.</p>
+            <ul>
+              <li>Vị trí là tuỳ chọn; vẫn quay được khi không có vị trí</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_list_play.png" alt="Danh sách lịch sử" loading="lazy"></figure>
+          <div>
+            <span class="idx">04 / history_list</span>
+            <h3>Lịch sử</h3>
+            <p>Mọi bản ghi được liệt kê theo thời gian cùng thời lượng và dB lớn nhất / trung bình / nhỏ nhất. Dữ liệu được lưu trên thiết bị của bạn.</p>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/history_detail_play.png" alt="Chi tiết bản ghi" loading="lazy"></figure>
+          <div>
+            <span class="idx">05 / history_detail</span>
+            <h3>Biểu đồ liên kết với video</h3>
+            <p>Trang chi tiết hiển thị toàn bộ đường cong dB cùng phần phát video. Chạm vào bất kỳ vị trí trên đường cong để đưa video tới đúng thời điểm đó.</p>
+            <ul>
+              <li>Chia sẻ Excel + video + âm thanh trong cùng một gói</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shot">
+          <figure><img src="image/me_play.png" alt="Trang cá nhân" loading="lazy"></figure>
+          <div>
+            <span class="idx">06 / me</span>
+            <h3>Của tôi</h3>
+            <p>Đăng nhập Google, trung tâm hội viên, xem quảng cáo có thưởng để nhận thêm hạn mức bản ghi, ngưỡng ghi theo âm thanh, cùng chính sách quyền riêng tư và điều khoản.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span> yatyapp · <a href="privacy.vi.html">Chính sách quyền riêng tư</a> · <a href="terms.vi.html">Điều khoản sử dụng</a> · <a href="mailto:zhangjunfeng020@gmail.com">zhangjunfeng020@gmail.com</a>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>
