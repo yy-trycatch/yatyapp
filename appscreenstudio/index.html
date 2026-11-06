@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AppScreenStudio · Google Play 上架图制作</title>
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#gallery"><span class="logo">A</span>AppScreenStudio</a>
+  <nav>
+    <a href="#gallery" id="nav-gallery" data-i18n>模板</a>
+    <a href="editor.html" id="nav-editor" data-i18n>编辑器</a>
+    <span id="langSlot"></span>
+  </nav>
+</header>
+
+<main id="view-gallery" class="view">
+  <section class="hero">
+    <h1 data-i18n-html>下一次出色的<em>第一印象</em>。从这里开始。</h1>
+    <p data-i18n>为 App Store 和 Google Play 准备好的截图模板。找到你的风格，改成自己的，然后准备上线。</p>
+  </section>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<script src="templates.js"></script>
+<script src="sets.js"></script>
+<script src="render.js"></script>
+<script src="decos.js"></script>
+<script src="mock.js"></script>
+<script src="editor/draw.js"></script>
+<script src="editor/model.js"></script>
+<script src="i18n-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

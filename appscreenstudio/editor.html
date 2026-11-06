@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编辑器 · AppScreenStudio</title>
+<link rel="stylesheet" href="editor/editor.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+<header class="ed-top">
+  <a class="brand" href="index.html" title="返回模板库" data-i18n-title><span class="logo">A</span></a>
+  <input id="projName" class="proj-name" title="点击修改工程名" data-i18n-title>
+  <span id="saveState" class="save-state"></span>
+  <span class="grow"></span>
+  <div class="grp">
+    <button id="btnUndo" class="ic" title="撤销 ⌘Z" data-i18n-title>↶</button>
+    <button id="btnRedo" class="ic" title="重做 ⇧⌘Z" data-i18n-title>↷</button>
+  </div>
+  <div class="grp">
+    <button id="zoomOut" class="ic" title="缩小" data-i18n-title>−</button>
+    <button id="zoomVal" class="zoom" title="重置为 100%" data-i18n-title>100%</button>
+    <button id="zoomIn" class="ic" title="放大" data-i18n-title>+</button>
+  </div>
+  <button id="btnLink" class="pill" title="App Store 与 Google Play 同位置文字同步" data-i18n-title data-i18n>链接文字</button>
+  <button id="btnNew" class="pill" data-i18n>新建</button>
+  <a class="pill" href="index.html" data-i18n>模板库</a>
+  <span id="langSlot"></span>
+  <button id="btnExport" class="pill dark" data-i18n>导出</button>
+</header>
+<div class="ed-body">
+  <nav id="rail" class="rail"></nav>
+  <aside id="drawer" class="drawer"></aside>
+  <main id="canvas" class="canvas"></main>
+  <aside id="props" class="props"></aside>
+</div>
+
+<div id="exportModal" class="modal" hidden>
+  <div class="modal-box">
+    <div class="modal-head"><b data-i18n>导出截图</b><button id="exClose" class="ic">×</button></div>
+    <p class="hint" data-i18n>为每个集勾选要导出的尺寸。同一设计会按比例渲染到所选尺寸，文件按 平台 / 集 / 尺寸 分文件夹打包。</p>
+    <div class="ex-body"></div>
+    <div class="modal-foot">
+      <label class="fld inline"><span data-i18n>格式</span> <select id="exFormat"><option value="png">PNG</option><option value="jpg">JPG</option></select></label>
+      <span id="exProgress" class="hint"></span><span class="grow"></span>
+      <button id="exGo" class="pill dark" data-i18n>导出 ZIP</button>
+    </div>
+  </div>
+</div>
+
+<script src="templates.js"></script>
+<script src="sets.js"></script>
+<script src="render.js"></script>
+<script src="decos.js"></script>
+<script src="mock.js"></script>
+<script src="zip.js"></script>
+<script src="editor/draw.js"></script>
+<script src="editor/model.js"></script>
+<script src="i18n-data.js"></script>
+<script src="editor/store.js"></script>
+<script src="editor/canvas.js"></script>
+<script src="editor/interact.js"></script>
+<script src="editor/panels-left.js"></script>
+<script src="editor/panels-left2.js"></script>
+<script src="editor/panels-right.js"></script>
+<script src="editor/export.js"></script>
+<script src="editor/main.js"></script>
+</body>
+</html>
